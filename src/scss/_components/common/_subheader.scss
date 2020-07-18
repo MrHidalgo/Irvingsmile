@@ -1,0 +1,65 @@
+// SECTION :: START
+
+#subheader {
+	z-index: 1100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #ff0000;
+
+	.subheader {
+		&__wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 40px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+
+			a {
+				position: relative;
+				color: #fff;
+				font-size: 16px;
+				font-weight: 800;
+				text-align: center;
+				@include adaptive(767) {
+					font-size: 14px;
+
+					span {
+						display: block;
+					}
+				}
+
+				&:hover {
+					&:after,
+					&:before {
+						width: 50%;
+						@include transition(width);
+					}
+				}
+
+				&:after,
+				&:before {
+					content: '';
+					position: absolute;
+					top: 100%;
+					width: 0;
+					height: 1px;
+					background-color: #fff;
+					@include transition(width);
+				}
+
+				&:after {
+					left: 50%;
+				}
+
+				&:before {
+					right: 50%;
+				}
+			}
+		}
+	}
+}
+
+// SECTION :: END
