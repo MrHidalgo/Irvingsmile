@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/* line 14, src/scss/_utilities/_extend.scss */
+#advantages .advantages__box-head img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 @font-face {
   font-family: "iconFont";
   src: url("../fonts/iconFont.eot");
@@ -282,6 +295,14 @@ picture {
   max-width: 100%;
   height: auto;
   max-height: 100%;
+}
+
+/* line 3, src/scss/_macros/_title.scss */
+.c-title {
+  font-size: 24px;
+  color: #85c440;
+  text-align: center;
+  font-weight: 900;
 }
 
 /* line 3, src/scss/_macros/_btn.scss */
@@ -825,17 +846,115 @@ picture {
 
 /* line 33, src/scss/_components/homepage/_holistic.scss */
 #holistic .holistic__title {
-  padding-bottom: 10px;
-  font-size: 24px;
-  color: #85c440;
-  text-align: center;
+  padding-bottom: 30px;
 }
 
-/* line 40, src/scss/_components/homepage/_holistic.scss */
+/* line 37, src/scss/_components/homepage/_holistic.scss */
 #holistic .holistic__desc {
   text-align: center;
   font-weight: bold;
+  font-size: 15px;
   color: #ffffff;
+}
+
+/* line 3, src/scss/_components/homepage/_advantages.scss */
+#advantages {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* line 10, src/scss/_components/homepage/_advantages.scss */
+#advantages .advantages__title {
+  padding-bottom: 50px;
+}
+
+/* line 14, src/scss/_components/homepage/_advantages.scss */
+#advantages .advantages__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+/* line 21, src/scss/_components/homepage/_advantages.scss */
+#advantages .advantages__box:hover .advantages__box-head img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.55s ease-in-out;
+  transition: -webkit-transform 0.55s ease-in-out;
+  -o-transition: transform 0.55s ease-in-out;
+  transition: transform 0.55s ease-in-out;
+  transition: transform 0.55s ease-in-out, -webkit-transform 0.55s ease-in-out;
+}
+
+/* line 28, src/scss/_components/homepage/_advantages.scss */
+#advantages .advantages__box-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 32, src/scss/_components/homepage/_advantages.scss */
+#advantages .advantages__box-wrapper > div {
+  width: 100%;
+  max-width: -webkit-calc((100% - 60px) / 4);
+  max-width: calc((100% - 60px) / 4);
+}
+
+/* line 38, src/scss/_components/homepage/_advantages.scss */
+#advantages .advantages__box-head {
+  overflow: hidden;
+  position: relative;
+  width: 220px;
+  height: 220px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: translateZ(-1);
+          transform: translateZ(-1);
+}
+
+/* line 48, src/scss/_components/homepage/_advantages.scss */
+#advantages .advantages__box-head img {
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.45s ease-in-out;
+  transition: -webkit-transform 0.45s ease-in-out;
+  -o-transition: transform 0.45s ease-in-out;
+  transition: transform 0.45s ease-in-out;
+  transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
+}
+
+/* line 56, src/scss/_components/homepage/_advantages.scss */
+#advantages .advantages__box-title {
+  padding-top: 25px;
+  padding-bottom: 10px;
+  font-size: 17px;
+  color: #0085cc;
+  font-weight: bold;
+}
+
+/* line 64, src/scss/_components/homepage/_advantages.scss */
+#advantages .advantages__box-desc {
+  font-size: 16px;
+  color: #6d6e71;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

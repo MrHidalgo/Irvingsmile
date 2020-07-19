@@ -1,8 +1,72 @@
 // SECTION :: START
 
 #advantages {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
 	.advantages {
 		&__wrapper {}
+
+		&__title {
+			padding-bottom: 50px;
+		}
+
+		&__box {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+			&:hover {
+				.advantages__box-head {
+					img {
+						transform: scale(1.1);
+						@include transition(transform 0.55s);
+					}
+				}
+			}
+
+			&-wrapper {
+				display: flex;
+				justify-content: space-between;
+
+				> div {
+					width: 100%;
+					max-width: calc((100% - 60px) / 4);
+				}
+			}
+
+			&-head {
+				overflow: hidden;
+				position: relative;
+				width: 220px;
+				height: 220px;
+				border-radius: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				transform: translateZ(-1);
+
+				img {
+					transform-origin: center;
+					backface-visibility: hidden;
+					@extend %imageResCoverAbs;
+					@include transition(transform 0.45s);
+				}
+			}
+
+			&-title {
+				padding-top: 25px;
+				padding-bottom: 10px;
+				font-size: 17px;
+				color: #0085cc;
+				font-weight: bold;
+			}
+
+			&-desc {
+				font-size: 16px;
+				color: #6d6e71;
+				font-weight: 300;
+			}
+		}
 	}
 }
 
