@@ -43,6 +43,21 @@
 			}
 		}
 	}
+
+	&--blue {
+		border-color: #137bbf;
+		background-color: #137bbf;
+
+		&:hover {
+			background-color: #ffffff;
+			@include transition(background-color);
+
+			span {
+				color: #137bbf;
+				@include transition(color);
+			}
+		}
+	}
 }
 
 // BUTTON :: END

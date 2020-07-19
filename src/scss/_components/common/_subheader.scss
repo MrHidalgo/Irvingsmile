@@ -8,14 +8,24 @@
 	width: 100%;
 	background-color: #ff0000;
 
+	& + #header {
+		top: 40px;
+		@include adaptive(767) {
+			top: 60px;
+		}
+	}
+
 	.subheader {
 		&__wrapper {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			min-height: 40px;
-			padding-top: 10px;
-			padding-bottom: 10px;
+			height: 40px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			@include adaptive(767) {
+				min-height: 60px;
+			}
 
 			a {
 				position: relative;
@@ -29,33 +39,6 @@
 					span {
 						display: block;
 					}
-				}
-
-				&:hover {
-					&:after,
-					&:before {
-						width: 50%;
-						@include transition(width);
-					}
-				}
-
-				&:after,
-				&:before {
-					content: '';
-					position: absolute;
-					top: 100%;
-					width: 0;
-					height: 1px;
-					background-color: #fff;
-					@include transition(width);
-				}
-
-				&:after {
-					left: 50%;
-				}
-
-				&:before {
-					right: 50%;
 				}
 			}
 		}

@@ -1,7 +1,44 @@
 // HEADER :: START
 
 header#header.header
-	.c-grid
+
+	.c-grid-fluid
+
 		.header__wrapper
+			.header__wrapper-left
+
+				.logo.logo--header
+					a.logo__brn(href="#")
+						img.logo__img(src="img/logo.png" alt="")
+
+			.header__wrapper-right
+				div
+
+					.header__info
+						a.header__info-link(href="#")
+							i.icon-font.icon-pin
+							span 1425 N O'Connor Rd, Irving, TX 75061
+						a.header__info-link(href="tel:214-492-1171")
+							i.icon-font.icon-phone-call
+							span 214-492-1171
+
+				div
+
+					nav.header__nav
+						a.header__nav-link(href="#")
+							span Virtual Consultations
+						a.header__nav-link(href="#")
+							span About
+						a.header__nav-link(href="#")
+							span Patients
+						a.header__nav-link(href="#")
+							span General
+						a.header__nav-link(href="#")
+							span Cosmetic
+						.c-btn__wrapper
+							a.c-btn.c-btn--blue(href="#")
+								span VIRTUAL CONSULTATIONS
+
+
 
 // HEADER :: END
