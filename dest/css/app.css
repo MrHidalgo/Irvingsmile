@@ -1186,4 +1186,26 @@ picture {
   font-size: 20px;
 }
 
+/* line 5, src/scss/_components/homepage/_partners.scss */
+#partners .partners__wrapper {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* line 12, src/scss/_components/homepage/_partners.scss */
+#partners .swiper-wrapper {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 17, src/scss/_components/homepage/_partners.scss */
+#partners .swiper-slide img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
 /*# sourceMappingURL=maps/app.css.map */

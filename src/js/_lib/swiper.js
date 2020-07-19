@@ -62,4 +62,18 @@ const initSwiper = () => {
 			clickable: true
 		},
 	});
+
+	const partnersSwiper = new Swiper('.partnersSwiper', {
+		loop: true,
+		grabCursor: true,
+		freeMode: false,
+		effect: 'slide',
+		autoplay: {
+			delay: 7300,
+			disableOnInteraction: false
+		},
+		speed: 1000,
+		slidesPerView: 4,
+		spaceBetween: 20,
+	});
 };

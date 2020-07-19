@@ -1,0 +1,27 @@
+// SECTION :: START
+
+#partners {
+	.partners {
+		&__wrapper {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+
+	.swiper {
+		&-wrapper {
+			align-items: center;
+		}
+
+		&-slide {
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				max-height: 100%;
+			}
+		}
+	}
+}
+
+// SECTION :: END

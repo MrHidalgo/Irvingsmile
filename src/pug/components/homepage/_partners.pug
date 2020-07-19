@@ -1,0 +1,30 @@
+// SECTION :: START
+
+section#partners.section
+	.partners__conatiner
+
+		.c-grid
+
+			.partners__wrapper
+
+				.partners__slider
+
+					mixin swiperContent()
+						.swiper-slide
+							img(src="img/img-partners-1.jpg" alt="")
+						.swiper-slide
+							img(src="img/img-partners-2.png" alt="")
+						.swiper-slide
+							img(src="img/img-partners-3.png" alt="")
+						.swiper-slide
+							img(src="img/img-partners-4.png" alt="")
+						.swiper-slide
+							img(src="img/img-partners-5.png" alt="")
+						.swiper-slide
+							img(src="img/img-partners-6.png" alt="")
+						.swiper-slide
+							img(src="img/img-partners-7.png" alt="")
+
+					+swiper('partnersSwiper', 'swiperContent', false, false, false)
+
+// SECTION :: END
