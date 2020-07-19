@@ -1,0 +1,90 @@
+// SECTION :: START
+
+#reviews {
+	position: relative;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-image: url('../img/img-reviews-bg.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&:after {
+		z-index: 0;
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,.5);
+	}
+
+	.reviews {
+		&__wrapper {
+			z-index: 2;
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			&-left,
+			&-right {
+				width: 50%;
+			}
+
+			&-left {
+				> div {
+					width: 100%;
+					max-width: 768px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+
+		&__title {
+			padding-bottom: 50px;
+			color: #ffffff;
+		}
+	}
+
+	.book {
+		&__form {
+			&-input,
+			&-textarea {
+				border-color: #fff;
+				color: #ffffff;
+				@include inputPlaceholder {
+					color: #ffffff;
+				}
+			}
+
+			&-label {
+				&.book__form-label--arrow {
+					.icon-font {
+						color: #ffffff;
+					}
+				}
+			}
+
+			&-radio {
+				.book__form-label {
+					color: #ffffff;
+				}
+			}
+		}
+
+		&__dropdown {
+			&-toggle {
+				border-color: #fff;
+				color: #ffffff;
+
+				.icon-font {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}
+
+// SECTION :: END

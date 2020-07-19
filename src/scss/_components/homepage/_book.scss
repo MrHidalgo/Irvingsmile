@@ -10,132 +10,35 @@
 		&__title {
 			padding-bottom: 50px;
 		}
+	}
+}
 
-		&__form {
+.book {
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		&-group,
+		&-field {
+			padding-bottom: 15px;
+		}
+
+		&-group {
 			display: flex;
-			flex-direction: column;
+			justify-content: space-between;
 
-			&-group,
-			&-field {
-				padding-bottom: 15px;
-			}
-
-			&-group {
-				display: flex;
-				justify-content: space-between;
-
-				> div {
-					width: 100%;
-					max-width: calc((100% - 30px) / 3);
-				}
-			}
-
-			&-label {
-				position: relative;
-				display: flex;
+			> div {
 				width: 100%;
-
-				&.book__form-label--arrow {
-					.icon-arrow {
-						position: absolute;
-						top: 0;
-						right: 0;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 40px;
-						height: 100%;
-						transform: rotate(-90deg);
-						color : #7bc143;
-					}
-
-					.book__form-input {
-						padding-right: 55px;
-					}
-				}
-			}
-
-			&-input,
-			&-textarea {
-				outline: none;
-				position: relative;
-				width: 100%;
-				height: 40px;
-				padding: 0 20px;
-				border: 1px solid #7bc143;
-				border-radius: 0;
-				box-shadow: none;
-				background-color: transparent;
-				font-size: 14px;
-				@include inputPlaceholder {
-					font-size: 14px;
-					color: #6d6e71;
-				}
-			}
-
-			&-textarea {
-				resize: none;
-				padding-top: 12px;
-			}
-
-			&-radio {
-				position: relative;
-				width: 100%;
-				max-width: 50%;
-				height: 40px;
-
-				input {
-					opacity: 0;
-					visibility: hidden;
-					position: absolute;
-					width: 0;
-					height: 0;
-
-					&:checked {
-						& + .book__form-label {
-							background-color: #7bc143;
-							color: #ffffff;
-							@include transition(background-color, color);
-						}
-					}
-				}
-
-				.book__form-label {
-					cursor: pointer;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					width: 100%;
-					height: 100%;
-					border: 1px solid #7bc143;
-					background-color: transparent;
-					color: #6d6e71;
-					@include transition(background-color, color);
-				}
-
-				&-group {
-					display: flex;
-				}
-			}
-
-			.c-btn__wrapper {
-				justify-content: center;
+				max-width: calc((100% - 30px) / 3);
 			}
 		}
 
-		&__dropdown {
+		&-label {
 			position: relative;
+			display: flex;
+			width: 100%;
 
-			&-toggle {
-				position: relative;
-				display: flex;
-				align-items: center;
-				height: 40px;
-				padding: 0 55px 0 20px;
-				border: 1px solid #7bc143;
-				background-color: transparent;
-				color: #6d6e71;
-
+			&.book__form-label--arrow {
 				.icon-arrow {
 					position: absolute;
 					top: 0;
@@ -148,38 +51,140 @@
 					transform: rotate(-90deg);
 					color : #7bc143;
 				}
-			}
 
-			&-wrapper {
-				overflow-y: auto;
-				z-index: 100;
-				display: none;
+				.book__form-input {
+					padding-right: 55px;
+				}
+			}
+		}
+
+		&-input,
+		&-textarea {
+			outline: none;
+			position: relative;
+			width: 100%;
+			height: 40px;
+			padding: 0 20px;
+			border: 1px solid #7bc143;
+			border-radius: 0;
+			box-shadow: none;
+			background-color: transparent;
+			font-size: 14px;
+			@include inputPlaceholder {
+				font-size: 14px;
+				color: #6d6e71;
+			}
+		}
+
+		&-textarea {
+			resize: none;
+			padding-top: 12px;
+		}
+
+		&-radio {
+			position: relative;
+			width: 100%;
+			max-width: 50%;
+			height: 40px;
+
+			input {
+				opacity: 0;
+				visibility: hidden;
 				position: absolute;
-				top: 100%;
-				left: 0;
-				width: 100%;
-				flex-direction: column;
-				max-height: 160px;
+				width: 0;
+				height: 0;
+
+				&:checked {
+					& + .book__form-label {
+						background-color: #7bc143;
+						color: #ffffff;
+						@include transition(background-color, color);
+					}
+				}
 			}
 
-			&-link {
+			.book__form-label {
+				cursor: pointer;
 				display: flex;
 				align-items: center;
-				height: 40px;
-				padding: 0 20px;
-				background-color: #7bc143;
-				color: #fff;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				padding: 5px 10px;
+				text-align: center;
+				border: 1px solid #7bc143;
+				line-height: 1.2;
+				background-color: transparent;
+				color: #6d6e71;
+				@include transition(background-color, color);
+			}
+
+			&-group {
+				display: flex;
+			}
+		}
+
+		.c-btn__wrapper {
+			justify-content: center;
+		}
+	}
+
+	&__dropdown {
+		position: relative;
+
+		&-toggle {
+			position: relative;
+			display: flex;
+			align-items: center;
+			height: 40px;
+			padding: 0 55px 0 20px;
+			border: 1px solid #7bc143;
+			background-color: transparent;
+			color: #6d6e71;
+
+			.icon-arrow {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 100%;
+				transform: rotate(-90deg);
+				color : #7bc143;
+			}
+		}
+
+		&-wrapper {
+			overflow-y: auto;
+			z-index: 100;
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			flex-direction: column;
+			max-height: 160px;
+		}
+
+		&-link {
+			display: flex;
+			align-items: center;
+			height: 40px;
+			padding: 0 20px;
+			background-color: #7bc143;
+			color: #fff;
+			@include transition(background-color);
+
+			&:hover,
+			&.is-active {
+				background-color: #137bbf;
 				@include transition(background-color);
+			}
 
-				&:hover,
-				&.is-active {
-					background-color: #137bbf;
-					@include transition(background-color);
-				}
-
-				&:not(:last-of-type) {
-					border-bottom: 1px solid #fff
-				}
+			&:not(:last-of-type) {
+				border-bottom: 1px solid #fff
 			}
 		}
 	}

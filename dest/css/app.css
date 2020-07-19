@@ -1191,8 +1191,8 @@ picture {
   padding-bottom: 50px;
 }
 
-/* line 14, src/scss/_components/homepage/_book.scss */
-#book .book__form {
+/* line 17, src/scss/_components/homepage/_book.scss */
+.book__form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1204,13 +1204,13 @@ picture {
           flex-direction: column;
 }
 
-/* line 18, src/scss/_components/homepage/_book.scss */
-#book .book__form-group, #book .book__form-field {
+/* line 21, src/scss/_components/homepage/_book.scss */
+.book__form-group, .book__form-field {
   padding-bottom: 15px;
 }
 
-/* line 23, src/scss/_components/homepage/_book.scss */
-#book .book__form-group {
+/* line 26, src/scss/_components/homepage/_book.scss */
+.book__form-group {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1221,15 +1221,15 @@ picture {
           justify-content: space-between;
 }
 
-/* line 27, src/scss/_components/homepage/_book.scss */
-#book .book__form-group > div {
+/* line 30, src/scss/_components/homepage/_book.scss */
+.book__form-group > div {
   width: 100%;
   max-width: -webkit-calc((100% - 30px) / 3);
   max-width: calc((100% - 30px) / 3);
 }
 
-/* line 33, src/scss/_components/homepage/_book.scss */
-#book .book__form-label {
+/* line 36, src/scss/_components/homepage/_book.scss */
+.book__form-label {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1238,8 +1238,8 @@ picture {
   width: 100%;
 }
 
-/* line 39, src/scss/_components/homepage/_book.scss */
-#book .book__form-label.book__form-label--arrow .icon-arrow {
+/* line 42, src/scss/_components/homepage/_book.scss */
+.book__form-label.book__form-label--arrow .icon-arrow {
   position: absolute;
   top: 0;
   right: 0;
@@ -1263,13 +1263,13 @@ picture {
   color: #7bc143;
 }
 
-/* line 52, src/scss/_components/homepage/_book.scss */
-#book .book__form-label.book__form-label--arrow .book__form-input {
+/* line 55, src/scss/_components/homepage/_book.scss */
+.book__form-label.book__form-label--arrow .book__form-input {
   padding-right: 55px;
 }
 
-/* line 58, src/scss/_components/homepage/_book.scss */
-#book .book__form-input, #book .book__form-textarea {
+/* line 61, src/scss/_components/homepage/_book.scss */
+.book__form-input, .book__form-textarea {
   outline: none;
   position: relative;
   width: 100%;
@@ -1285,51 +1285,51 @@ picture {
 }
 
 /* line 88, src/scss/_utilities/_mixin.scss */
-#book .book__form-input.placeholder, #book .book__form-textarea.placeholder {
+.book__form-input.placeholder, .book__form-textarea.placeholder {
   font-size: 14px;
   color: #6d6e71;
 }
 
 /* line 89, src/scss/_utilities/_mixin.scss */
-#book .book__form-input:-moz-placeholder, #book .book__form-textarea:-moz-placeholder {
+.book__form-input:-moz-placeholder, .book__form-textarea:-moz-placeholder {
   font-size: 14px;
   color: #6d6e71;
 }
 
 /* line 90, src/scss/_utilities/_mixin.scss */
-#book .book__form-input::-moz-placeholder, #book .book__form-textarea::-moz-placeholder {
+.book__form-input::-moz-placeholder, .book__form-textarea::-moz-placeholder {
   font-size: 14px;
   color: #6d6e71;
 }
 
 /* line 91, src/scss/_utilities/_mixin.scss */
-#book .book__form-input:-ms-input-placeholder, #book .book__form-textarea:-ms-input-placeholder {
+.book__form-input:-ms-input-placeholder, .book__form-textarea:-ms-input-placeholder {
   font-size: 14px;
   color: #6d6e71;
 }
 
 /* line 92, src/scss/_utilities/_mixin.scss */
-#book .book__form-input::-webkit-input-placeholder, #book .book__form-textarea::-webkit-input-placeholder {
+.book__form-input::-webkit-input-placeholder, .book__form-textarea::-webkit-input-placeholder {
   font-size: 14px;
   color: #6d6e71;
 }
 
-/* line 76, src/scss/_components/homepage/_book.scss */
-#book .book__form-textarea {
+/* line 79, src/scss/_components/homepage/_book.scss */
+.book__form-textarea {
   resize: none;
   padding-top: 12px;
 }
 
-/* line 81, src/scss/_components/homepage/_book.scss */
-#book .book__form-radio {
+/* line 84, src/scss/_components/homepage/_book.scss */
+.book__form-radio {
   position: relative;
   width: 100%;
   max-width: 50%;
   height: 40px;
 }
 
-/* line 87, src/scss/_components/homepage/_book.scss */
-#book .book__form-radio input {
+/* line 90, src/scss/_components/homepage/_book.scss */
+.book__form-radio input {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -1337,8 +1337,8 @@ picture {
   height: 0;
 }
 
-/* line 95, src/scss/_components/homepage/_book.scss */
-#book .book__form-radio input:checked + .book__form-label {
+/* line 98, src/scss/_components/homepage/_book.scss */
+.book__form-radio input:checked + .book__form-label {
   background-color: #7bc143;
   color: #ffffff;
   -webkit-transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
@@ -1346,8 +1346,8 @@ picture {
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-/* line 103, src/scss/_components/homepage/_book.scss */
-#book .book__form-radio .book__form-label {
+/* line 106, src/scss/_components/homepage/_book.scss */
+.book__form-radio .book__form-label {
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1363,7 +1363,10 @@ picture {
           justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 5px 10px;
+  text-align: center;
   border: 1px solid #7bc143;
+  line-height: 1.2;
   background-color: transparent;
   color: #6d6e71;
   -webkit-transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
@@ -1371,29 +1374,29 @@ picture {
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-/* line 116, src/scss/_components/homepage/_book.scss */
-#book .book__form-radio-group {
+/* line 122, src/scss/_components/homepage/_book.scss */
+.book__form-radio-group {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 121, src/scss/_components/homepage/_book.scss */
-#book .book__form .c-btn__wrapper {
+/* line 127, src/scss/_components/homepage/_book.scss */
+.book__form .c-btn__wrapper {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-/* line 126, src/scss/_components/homepage/_book.scss */
-#book .book__dropdown {
+/* line 132, src/scss/_components/homepage/_book.scss */
+.book__dropdown {
   position: relative;
 }
 
-/* line 129, src/scss/_components/homepage/_book.scss */
-#book .book__dropdown-toggle {
+/* line 135, src/scss/_components/homepage/_book.scss */
+.book__dropdown-toggle {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1410,8 +1413,8 @@ picture {
   color: #6d6e71;
 }
 
-/* line 139, src/scss/_components/homepage/_book.scss */
-#book .book__dropdown-toggle .icon-arrow {
+/* line 145, src/scss/_components/homepage/_book.scss */
+.book__dropdown-toggle .icon-arrow {
   position: absolute;
   top: 0;
   right: 0;
@@ -1435,8 +1438,8 @@ picture {
   color: #7bc143;
 }
 
-/* line 153, src/scss/_components/homepage/_book.scss */
-#book .book__dropdown-wrapper {
+/* line 159, src/scss/_components/homepage/_book.scss */
+.book__dropdown-wrapper {
   overflow-y: auto;
   z-index: 100;
   display: none;
@@ -1452,8 +1455,8 @@ picture {
   max-height: 160px;
 }
 
-/* line 165, src/scss/_components/homepage/_book.scss */
-#book .book__dropdown-link {
+/* line 171, src/scss/_components/homepage/_book.scss */
+.book__dropdown-link {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1471,16 +1474,16 @@ picture {
   transition: background-color 0.4s ease-in-out;
 }
 
-/* line 174, src/scss/_components/homepage/_book.scss */
-#book .book__dropdown-link:hover, #book .book__dropdown-link.is-active {
+/* line 180, src/scss/_components/homepage/_book.scss */
+.book__dropdown-link:hover, .book__dropdown-link.is-active {
   background-color: #137bbf;
   -webkit-transition: background-color 0.4s ease-in-out;
   -o-transition: background-color 0.4s ease-in-out;
   transition: background-color 0.4s ease-in-out;
 }
 
-/* line 180, src/scss/_components/homepage/_book.scss */
-#book .book__dropdown-link:not(:last-of-type) {
+/* line 186, src/scss/_components/homepage/_book.scss */
+.book__dropdown-link:not(:last-of-type) {
   border-bottom: 1px solid #fff;
 }
 
@@ -1886,6 +1889,115 @@ picture {
   max-width: 100%;
   height: auto;
   max-height: 100%;
+}
+
+/* line 3, src/scss/_components/homepage/_reviews.scss */
+#reviews {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url("../img/img-reviews-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+/* line 12, src/scss/_components/homepage/_reviews.scss */
+#reviews:after {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 24, src/scss/_components/homepage/_reviews.scss */
+#reviews .reviews__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 30, src/scss/_components/homepage/_reviews.scss */
+#reviews .reviews__wrapper-left, #reviews .reviews__wrapper-right {
+  width: 50%;
+}
+
+/* line 36, src/scss/_components/homepage/_reviews.scss */
+#reviews .reviews__wrapper-left > div {
+  width: 100%;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 45, src/scss/_components/homepage/_reviews.scss */
+#reviews .reviews__title {
+  padding-bottom: 50px;
+  color: #ffffff;
+}
+
+/* line 53, src/scss/_components/homepage/_reviews.scss */
+#reviews .book__form-input, #reviews .book__form-textarea {
+  border-color: #fff;
+  color: #ffffff;
+}
+
+/* line 88, src/scss/_utilities/_mixin.scss */
+#reviews .book__form-input.placeholder, #reviews .book__form-textarea.placeholder {
+  color: #ffffff;
+}
+
+/* line 89, src/scss/_utilities/_mixin.scss */
+#reviews .book__form-input:-moz-placeholder, #reviews .book__form-textarea:-moz-placeholder {
+  color: #ffffff;
+}
+
+/* line 90, src/scss/_utilities/_mixin.scss */
+#reviews .book__form-input::-moz-placeholder, #reviews .book__form-textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+/* line 91, src/scss/_utilities/_mixin.scss */
+#reviews .book__form-input:-ms-input-placeholder, #reviews .book__form-textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+/* line 92, src/scss/_utilities/_mixin.scss */
+#reviews .book__form-input::-webkit-input-placeholder, #reviews .book__form-textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+/* line 64, src/scss/_components/homepage/_reviews.scss */
+#reviews .book__form-label.book__form-label--arrow .icon-font {
+  color: #ffffff;
+}
+
+/* line 71, src/scss/_components/homepage/_reviews.scss */
+#reviews .book__form-radio .book__form-label {
+  color: #ffffff;
+}
+
+/* line 78, src/scss/_components/homepage/_reviews.scss */
+#reviews .book__dropdown-toggle {
+  border-color: #fff;
+  color: #ffffff;
+}
+
+/* line 82, src/scss/_components/homepage/_reviews.scss */
+#reviews .book__dropdown-toggle .icon-font {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=maps/app.css.map */
