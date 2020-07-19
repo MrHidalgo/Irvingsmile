@@ -5,7 +5,32 @@
 	/*
 	* CALLBACK :: start
 	* ============================================= */
+	const initDatePicker = () => {
+		flatpickr('#book-datepicker', {
+			dateFormat: "m/d/Y",
+		});
+	};
 
+	const dropdown = () => {
+		$('[dropdown-toggle-js]').on('click', (ev) => {
+			const el = $(ev.currentTarget),
+				elParent = el.closest('[dropdown-parent-js]'),
+				elDrop = elParent.find('[dropdown-block-js]');
+
+			elDrop.slideToggle(350).css({display:'flex'});
+		});
+
+		$('[dropdown-link-js]').on('click', (ev) => {
+			const el = $(ev.currentTarget),
+				elVal = el.attr('data-val'),
+				elParent = el.closest('[dropdown-parent-js]'),
+				elDrop = elParent.find('[dropdown-block-js]');
+
+			$('[dropdown-toggle-js] span').html(elVal);
+
+			elDrop.slideToggle(350).css({display:'flex'});
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -26,6 +51,8 @@
 		// ==========================================
 
 		// callback
+		initDatePicker();
+		dropdown();
 		// ==========================================
 	};
 	initNative();

@@ -12,6 +12,7 @@
     <link rel="icon" href="icon/favicon-icon.png" sizes="32x32">
     <link rel="icon" href="icon/favicon-icon.png" sizes="192x192">
     <link rel="apple-touch-icon-precomposed" href="icon/favicon-icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!-- STYLE :: START-->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/app.css">
@@ -119,6 +120,70 @@
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION :: END-->
+      <!-- SECTION :: START-->
+      <section class="section" id="book">
+        <div class="book__conatiner">
+          <p class="book__title c-title">Book an Appointment Today</p>
+          <div class="c-grid">
+            <div class="book__wrapper">
+              <form class="book__form" action="" method="" autocomplete="off">
+                <div class="book__form-group">
+                  <div>
+                    <label class="book__form-label">
+                      <input class="book__form-input" type="text" name="" placeholder="Full Name">
+                    </label>
+                  </div>
+                  <div>
+                    <label class="book__form-label">
+                      <input class="book__form-input" type="email" name="" placeholder="Email">
+                    </label>
+                  </div>
+                  <div>
+                    <label class="book__form-label">
+                      <input class="book__form-input" type="tel" name="" placeholder="Phone">
+                    </label>
+                  </div>
+                </div>
+                <div class="book__form-group">
+                  <div>
+                    <label class="book__form-label book__form-label--arrow">
+                      <input class="book__form-input" id="book-datepicker" type="text" name="" placeholder="Preferred Date"><i class="icon-font icon-arrow"></i>
+                    </label>
+                  </div>
+                  <div>
+                    <div class="book__dropdown" dropdown-parent-js><a class="book__dropdown-toggle" href="#" dropdown-toggle-js><span>Preferred Time</span><i class="icon-font icon-arrow"></i></a>
+                      <div class="book__dropdown-wrapper" dropdown-block-js><a class="book__dropdown-link is-active" href="#" data-val="Preferred Time" dropdown-link-js>Preferred Time</a><a class="book__dropdown-link" href="#" data-val="Morning" dropdown-link-js>Morning</a><a class="book__dropdown-link" href="#" data-val="Afternoon" dropdown-link-js>Afternoon</a><a class="book__dropdown-link" href="#" data-val="Evening" dropdown-link-js>Evening</a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="book__form-radio-group">
+                      <div class="book__form-radio">
+                        <input class="book__form-radio" type="radio" id="new_patient" name="patient-group" checked>
+                        <label class="book__form-label" for="new_patient"><span>New Patient</span></label>
+                      </div>
+                      <div class="book__form-radio">
+                        <input class="book__form-radio" type="radio" id="returning_patient" name="patient-group">
+                        <label class="book__form-label" for="returning_patient"><span>Returning Patient</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="book__form-field">
+                  <label class="book__form-label">
+                    <textarea class="book__form-textarea" placeholder="Phone"></textarea>
+                  </label>
+                </div>
+                <div class="book__form-field">
+                  <div class="c-btn__wrapper">
+                    <button class="c-btn c-btn--green" type="submit"><span>Submit</span></button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -404,6 +469,7 @@
     <!-- FOOTER :: END-->
   </body>
   <!-- SCRIPT :: START-->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="js/vendor.js"></script>
   <script src="js/app.js"></script>
   <!-- SCRIPT :: END-->

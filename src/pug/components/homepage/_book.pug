@@ -1,0 +1,62 @@
+// SECTION :: START
+
+section#book.section
+	.book__conatiner
+
+		p.book__title.c-title Book an Appointment Today
+
+		.c-grid
+
+			.book__wrapper
+
+				form.book__form(action='' method='' autocomplete='off')
+
+					.book__form-group
+						div
+							label.book__form-label
+								input.book__form-input(type='text' name='' placeholder='Full Name')
+						div
+							label.book__form-label
+								input.book__form-input(type='email' name='' placeholder='Email')
+						div
+							label.book__form-label
+								input.book__form-input(type='tel' name='' placeholder='Phone')
+
+					.book__form-group
+						div
+							label.book__form-label.book__form-label--arrow
+								input.book__form-input#book-datepicker(type='text' name='' placeholder='Preferred Date')
+								i.icon-font.icon-arrow
+						div
+
+							.book__dropdown(dropdown-parent-js)
+								a.book__dropdown-toggle(href="#" dropdown-toggle-js)
+									span Preferred Time
+									i.icon-font.icon-arrow
+								.book__dropdown-wrapper(dropdown-block-js)
+									a.book__dropdown-link.is-active(href="#" data-val='Preferred Time' dropdown-link-js) Preferred Time
+									a.book__dropdown-link(href="#" data-val='Morning' dropdown-link-js) Morning
+									a.book__dropdown-link(href="#" data-val='Afternoon' dropdown-link-js) Afternoon
+									a.book__dropdown-link(href="#" data-val='Evening' dropdown-link-js) Evening
+
+						div
+							.book__form-radio-group
+								.book__form-radio
+									input.book__form-radio(type='radio' id='new_patient' name='patient-group' checked)
+									label.book__form-label(for='new_patient')
+										span New Patient
+								.book__form-radio
+									input.book__form-radio(type='radio' id='returning_patient' name='patient-group')
+									label.book__form-label(for='returning_patient')
+										span Returning Patient
+
+					.book__form-field
+						label.book__form-label
+							textarea.book__form-textarea(placeholder='Phone')
+
+					.book__form-field
+						.c-btn__wrapper
+							button.c-btn.c-btn--green(type='submit')
+								span Submit
+
+// SECTION :: END

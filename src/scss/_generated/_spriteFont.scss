@@ -27,17 +27,20 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == email {
+	@if $filename == arrow {
 		$char: "\E001";
 	}
-	@if $filename == facebook {
+	@if $filename == email {
 		$char: "\E002";
 	}
-	@if $filename == phone-call {
+	@if $filename == facebook {
 		$char: "\E003";
 	}
-	@if $filename == pin {
+	@if $filename == phone-call {
 		$char: "\E004";
+	}
+	@if $filename == pin {
+		$char: "\E005";
 	}
 
 	@return $char;
@@ -54,6 +57,10 @@
 	}
 }
 
+.icon-arrow {
+	@include icon(arrow);
+
+}
 .icon-email {
 	@include icon(email);
 

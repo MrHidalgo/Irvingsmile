@@ -22,14 +22,14 @@
  */
 var initHeaderFixed = function initHeaderFixed() {
 
-  var countScroll = $(window).scrollTop(),
-      headerElement = $('.header');
+	var countScroll = $(window).scrollTop(),
+	    headerElement = $('.header');
 
-  if (countScroll > 10) {
-    headerElement.addClass("header--fixed");
-  } else {
-    headerElement.removeClass("header--fixed");
-  }
+	if (countScroll > 10) {
+		headerElement.addClass("header--fixed");
+	} else {
+		headerElement.removeClass("header--fixed");
+	}
 };
 
 /**
@@ -39,16 +39,16 @@ var initHeaderFixed = function initHeaderFixed() {
  */
 var initPreventBehavior = function initPreventBehavior() {
 
-  var link = document.querySelectorAll("a");
+	var link = document.querySelectorAll("a");
 
-  link.forEach(function (val, idx) {
+	link.forEach(function (val, idx) {
 
-    val.addEventListener("click", function (e) {
-      if (val.getAttribute("href") === "#") {
-        e.preventDefault();
-      }
-    });
-  });
+		val.addEventListener("click", function (e) {
+			if (val.getAttribute("href") === "#") {
+				e.preventDefault();
+			}
+		});
+	});
 };
 
 /**
@@ -58,7 +58,7 @@ var initPreventBehavior = function initPreventBehavior() {
  */
 var initSvg4everybody = function initSvg4everybody() {
 
-  svg4everybody();
+	svg4everybody();
 };
 
 /**
@@ -68,75 +68,75 @@ var initSvg4everybody = function initSvg4everybody() {
  */
 var initSwiper = function initSwiper() {
 
-  var mainSwiper = new Swiper('.mainSwiper', {
-    loop: true,
-    grabCursor: true,
-    freeMode: false,
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-    autoplay: {
-      delay: 7500,
-      disableOnInteraction: false
-    },
-    speed: 1000,
-    slidesPerView: 1,
-    spaceBetween: 0,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
-  });
+	var mainSwiper = new Swiper('.mainSwiper', {
+		loop: true,
+		grabCursor: true,
+		freeMode: false,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		autoplay: {
+			delay: 7500,
+			disableOnInteraction: false
+		},
+		speed: 1000,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		}
+	});
 
-  var servicesSwiper = new Swiper('.servicesSwiper', {
-    loop: true,
-    grabCursor: true,
-    freeMode: false,
-    effect: 'slide',
-    autoplay: {
-      delay: 7250,
-      disableOnInteraction: false
-    },
-    speed: 1000,
-    slidesPerView: 4,
-    spaceBetween: 20
-  });
+	var servicesSwiper = new Swiper('.servicesSwiper', {
+		loop: true,
+		grabCursor: true,
+		freeMode: false,
+		effect: 'slide',
+		autoplay: {
+			delay: 7250,
+			disableOnInteraction: false
+		},
+		speed: 1000,
+		slidesPerView: 4,
+		spaceBetween: 20
+	});
 
-  var promotionsSwiper = new Swiper('.promotionsSwiper', {
-    loop: true,
-    grabCursor: true,
-    freeMode: false,
-    effect: 'slide',
-    fadeEffect: {
-      crossFade: true
-    },
-    autoplay: {
-      delay: 7350,
-      disableOnInteraction: false
-    },
-    speed: 1000,
-    slidesPerView: 3,
-    spaceBetween: 40,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
-  });
+	var promotionsSwiper = new Swiper('.promotionsSwiper', {
+		loop: true,
+		grabCursor: true,
+		freeMode: false,
+		effect: 'slide',
+		fadeEffect: {
+			crossFade: true
+		},
+		autoplay: {
+			delay: 7350,
+			disableOnInteraction: false
+		},
+		speed: 1000,
+		slidesPerView: 3,
+		spaceBetween: 40,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		}
+	});
 
-  var partnersSwiper = new Swiper('.partnersSwiper', {
-    loop: true,
-    grabCursor: true,
-    freeMode: false,
-    effect: 'slide',
-    autoplay: {
-      delay: 7300,
-      disableOnInteraction: false
-    },
-    speed: 1000,
-    slidesPerView: 4,
-    spaceBetween: 20
-  });
+	var partnersSwiper = new Swiper('.partnersSwiper', {
+		loop: true,
+		grabCursor: true,
+		freeMode: false,
+		effect: 'slide',
+		autoplay: {
+			delay: 7300,
+			disableOnInteraction: false
+		},
+		speed: 1000,
+		slidesPerView: 4,
+		spaceBetween: 20
+	});
 };
 
 /**
@@ -146,32 +146,32 @@ var initSwiper = function initSwiper() {
  */
 var initWebFontLoader = function initWebFontLoader() {
 
-  /**
-    * @description
-   */
-  WebFont.load({
-    google: {
-      families: ['Roboto:100,300,400,500,700,900']
-    }
-  });
+	/**
+   * @description
+  */
+	WebFont.load({
+		google: {
+			families: ['Roboto:100,300,400,500,700,900']
+		}
+	});
 
-  /**
-    * @description
-   */
-  // const WebFontConfig = {
-  //   custom: {
-  //     families: [
-  //       'Lato:n1,n3,n4,n5,n6,n7,n9'
-  //     ]
-  //   }
-  // };
+	/**
+   * @description
+  */
+	// const WebFontConfig = {
+	//   custom: {
+	//     families: [
+	//       'Lato:n1,n3,n4,n5,n6,n7,n9'
+	//     ]
+	//   }
+	// };
 };
 
 /**
  * @description Window on load.
  */
 window.addEventListener('load', function (ev) {
-  initHeaderFixed();
+	initHeaderFixed();
 });
 
 /**
@@ -183,37 +183,64 @@ window.addEventListener('resize', function (ev) {});
  * @description Window on scroll.
  */
 window.addEventListener('scroll', function (ev) {
-  initHeaderFixed();
+	initHeaderFixed();
 });
 
 /**
  * @description Document DOM ready.
  */
 (function () {
-  /*
-  * CALLBACK :: start
-  * ============================================= */
+	/*
+ * CALLBACK :: start
+ * ============================================= */
+	var initDatePicker = function initDatePicker() {
+		flatpickr('#book-datepicker', {
+			dateFormat: "m/d/Y"
+		});
+	};
 
-  /*
-  * CALLBACK :: end
-  * ============================================= */
+	var dropdown = function dropdown() {
+		$('[dropdown-toggle-js]').on('click', function (ev) {
+			var el = $(ev.currentTarget),
+			    elParent = el.closest('[dropdown-parent-js]'),
+			    elDrop = elParent.find('[dropdown-block-js]');
 
-  /**
-   * @name initNative
-   *
-   * @description Init all method
-   */
-  var initNative = function initNative() {
-    // default
-    initPreventBehavior();
-    // ==========================================
+			elDrop.slideToggle(350).css({ display: 'flex' });
+		});
 
-    // lib
-    initSwiper();
-    // ==========================================
+		$('[dropdown-link-js]').on('click', function (ev) {
+			var el = $(ev.currentTarget),
+			    elVal = el.attr('data-val'),
+			    elParent = el.closest('[dropdown-parent-js]'),
+			    elDrop = elParent.find('[dropdown-block-js]');
 
-    // callback
-    // ==========================================
-  };
-  initNative();
+			$('[dropdown-toggle-js] span').html(elVal);
+
+			elDrop.slideToggle(350).css({ display: 'flex' });
+		});
+	};
+	/*
+ * CALLBACK :: end
+ * ============================================= */
+
+	/**
+  * @name initNative
+  *
+  * @description Init all method
+  */
+	var initNative = function initNative() {
+		// default
+		initPreventBehavior();
+		// ==========================================
+
+		// lib
+		initSwiper();
+		// ==========================================
+
+		// callback
+		initDatePicker();
+		dropdown();
+		// ==========================================
+	};
+	initNative();
 })();
