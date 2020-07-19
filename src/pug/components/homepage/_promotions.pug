@@ -1,0 +1,53 @@
+// SECTION :: START
+
+section#promotions.section
+	.promotions__conatiner
+
+		.c-grid
+
+			p.promotions__title.c-title Promotions
+
+			.promotions__wrapper
+
+				.promotions__slider
+
+					mixin swiperContent()
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								div
+									p Free
+									span New Patient Exam, X-Rays & Oral Cancer Screening
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								div
+									p Free
+									span First Session of Invisalign
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								div
+									p Free
+									span Implant Consultation with 3D Scan
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								div
+									p $25
+									span Consultation for Any Service
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								div
+									p $59*
+									span!= "Emergency special <br>Includes new patient exam, full mouth x-rays, & Prophy *in the absence of gum disease"
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								div
+									p $3800
+									span for 10 trays or less of Invisalign
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								div
+									p $5500
+									span for full set of Invisalign
+
+					+swiper('promotionsSwiper', 'swiperContent', true, false, false)
+
+// SECTION :: END

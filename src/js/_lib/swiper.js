@@ -16,7 +16,8 @@ const initSwiper = () => {
 			crossFade: true
 		},
     autoplay: {
-      delay: 7500
+      delay: 7500,
+			disableOnInteraction: false
     },
 		speed: 1000,
     slidesPerView: 1,
@@ -33,10 +34,32 @@ const initSwiper = () => {
     freeMode: false,
     effect: 'slide',
     autoplay: {
-      delay: 7500
+      delay: 7250,
+			disableOnInteraction: false
     },
 		speed: 1000,
     slidesPerView: 4,
     spaceBetween: 20,
   });
+
+	const promotionsSwiper = new Swiper('.promotionsSwiper', {
+		loop: true,
+		grabCursor: true,
+		freeMode: false,
+		effect: 'slide',
+		fadeEffect: {
+			crossFade: true
+		},
+		autoplay: {
+			delay: 7350,
+			disableOnInteraction: false
+		},
+		speed: 1000,
+		slidesPerView: 3,
+		spaceBetween: 40,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		},
+	});
 };
