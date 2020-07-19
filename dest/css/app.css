@@ -19,7 +19,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-phone-call:before, .icon-pin:before {
+.icon-email:before, .icon-facebook:before, .icon-phone-call:before, .icon-pin:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,14 +30,24 @@
   text-transform: none;
 }
 
-/* line 41, src/scss/_generated/_spriteFont.scss */
-.icon-phone-call:before {
+/* line 47, src/scss/_generated/_spriteFont.scss */
+.icon-email:before {
   content: "";
 }
 
-/* line 41, src/scss/_generated/_spriteFont.scss */
-.icon-pin:before {
+/* line 47, src/scss/_generated/_spriteFont.scss */
+.icon-facebook:before {
   content: "";
+}
+
+/* line 47, src/scss/_generated/_spriteFont.scss */
+.icon-phone-call:before {
+  content: "";
+}
+
+/* line 47, src/scss/_generated/_spriteFont.scss */
+.icon-pin:before {
+  content: "";
 }
 
 @font-face {
@@ -269,6 +279,69 @@ picture {
 /* line 27, src/scss/_shared/_grid.scss */
 .c-grid-fluid {
   max-width: 100%;
+}
+
+/* line 3, src/scss/_shared/_common.scss */
+.copyright {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 6, src/scss/_shared/_common.scss */
+.copyright__text {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* line 10, src/scss/_shared/_common.scss */
+.copyright__text a {
+  position: relative;
+  color: #ffffff;
+  font-weight: 700;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+/* line 16, src/scss/_shared/_common.scss */
+.copyright__text a:hover {
+  color: #337ab7;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+/* line 20, src/scss/_shared/_common.scss */
+.copyright__text a:hover:before, .copyright__text a:hover:after {
+  width: 50%;
+  -webkit-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* line 27, src/scss/_shared/_common.scss */
+.copyright__text a:before, .copyright__text a:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 1px;
+  background-color: #337ab7;
+  -webkit-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* line 38, src/scss/_shared/_common.scss */
+.copyright__text a:before {
+  left: 50%;
+}
+
+/* line 42, src/scss/_shared/_common.scss */
+.copyright__text a:after {
+  right: 50%;
 }
 
 /* line 1, src/scss/_shared/_iconFont.scss */
@@ -619,6 +692,304 @@ picture {
 /* line 125, src/scss/_components/common/_header.scss */
 .header__nav-link:after {
   right: 50%;
+}
+
+/* line 3, src/scss/_components/common/_footer.scss */
+.footer {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: #7bc143;
+}
+
+/* line 8, src/scss/_components/common/_footer.scss */
+.footer__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 15, src/scss/_components/common/_footer.scss */
+.footer__wrapper-1 {
+  padding-bottom: 50px;
+}
+
+/* line 19, src/scss/_components/common/_footer.scss */
+.footer__wrapper-2 {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 24, src/scss/_components/common/_footer.scss */
+.footer__wrapper-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  padding-right: 15px;
+}
+
+/* line 31, src/scss/_components/common/_footer.scss */
+.footer__wrapper-left .c-btn__wrapper {
+  padding-bottom: 30px;
+}
+
+/* line 36, src/scss/_components/common/_footer.scss */
+.footer__wrapper-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 43, src/scss/_components/common/_footer.scss */
+.footer__wrapper-right > div:nth-of-type(1) {
+  width: 100%;
+  max-width: 320px;
+  padding-right: 15px;
+}
+
+/* line 49, src/scss/_components/common/_footer.scss */
+.footer__wrapper-right > div:nth-of-type(2) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* line 56, src/scss/_components/common/_footer.scss */
+.footer__wrapper-right > div:nth-of-type(2) iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 66, src/scss/_components/common/_footer.scss */
+.footer__phone {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+/* line 72, src/scss/_components/common/_footer.scss */
+.footer__phone:hover .icon-font,
+.footer__phone:hover span {
+  color: #337ab7;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+/* line 79, src/scss/_components/common/_footer.scss */
+.footer__phone .icon-font,
+.footer__phone span {
+  color: #fff;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+/* line 85, src/scss/_components/common/_footer.scss */
+.footer__phone .icon-font {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+/* line 90, src/scss/_components/common/_footer.scss */
+.footer__phone span {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+/* line 96, src/scss/_components/common/_footer.scss */
+.footer__link {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 102, src/scss/_components/common/_footer.scss */
+.footer__link--wline:before, .footer__link--wline:after {
+  display: none;
+}
+
+/* line 109, src/scss/_components/common/_footer.scss */
+.footer__link:hover:before, .footer__link:hover:after {
+  width: 50%;
+  -webkit-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* line 115, src/scss/_components/common/_footer.scss */
+.footer__link:hover .icon-font,
+.footer__link:hover span {
+  color: #337ab7;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+/* line 122, src/scss/_components/common/_footer.scss */
+.footer__link:before, .footer__link:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 1px;
+  background-color: #337ab7;
+  -webkit-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* line 133, src/scss/_components/common/_footer.scss */
+.footer__link:before {
+  left: 50%;
+}
+
+/* line 137, src/scss/_components/common/_footer.scss */
+.footer__link:after {
+  right: 50%;
+}
+
+/* line 141, src/scss/_components/common/_footer.scss */
+.footer__link:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+/* line 145, src/scss/_components/common/_footer.scss */
+.footer__link-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 151, src/scss/_components/common/_footer.scss */
+.footer__link .icon-font,
+.footer__link span {
+  color: #ffffff;
+  font-size: 16px;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+/* line 158, src/scss/_components/common/_footer.scss */
+.footer__link .icon-font {
+  margin-right: 5px;
+}
+
+/* line 162, src/scss/_components/common/_footer.scss */
+.footer__link span {
+  font-weight: 600;
+}
+
+/* line 167, src/scss/_components/common/_footer.scss */
+.footer__title {
+  padding-bottom: 30px;
+  text-align: left;
+  color: #ffffff;
+}
+
+/* line 173, src/scss/_components/common/_footer.scss */
+.footer__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 177, src/scss/_components/common/_footer.scss */
+.footer__list li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 180, src/scss/_components/common/_footer.scss */
+.footer__list li:not(:last-of-type) {
+  padding-bottom: 15px;
+}
+
+/* line 185, src/scss/_components/common/_footer.scss */
+.footer__list li > div:nth-of-type(1) {
+  width: 110px;
+}
+
+/* line 188, src/scss/_components/common/_footer.scss */
+.footer__list li > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 195, src/scss/_components/common/_footer.scss */
+.footer__list li p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
 }
 
 /* line 3, src/scss/_components/common/_subheader.scss */

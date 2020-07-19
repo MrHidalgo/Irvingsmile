@@ -1,3 +1,49 @@
 // COMMON :: START
 
+.copyright {
+	display: flex;
+
+	&__text {
+		color: #ffffff;
+		font-size: 16px;
+
+		a {
+			position: relative;
+			color: #ffffff;
+			font-weight: 700;
+			@include transition(color);
+
+			&:hover {
+				color: #337ab7;
+				@include transition(color);
+
+				&:before,
+				&:after {
+					width: 50%;
+					@include transition(width);
+				}
+			}
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 100%;
+				width: 0;
+				height: 1px;
+				background-color: #337ab7;
+				@include transition(width);
+			}
+
+			&:before {
+				left: 50%;
+			}
+
+			&:after {
+				right: 50%;
+			}
+		}
+	}
+}
+
 // COMMON :: END
