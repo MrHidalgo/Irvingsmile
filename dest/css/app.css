@@ -1523,8 +1523,8 @@ picture {
       -ms-flex-align: center;
           align-items: center;
   min-height: 300px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 /* line 33, src/scss/_components/homepage/_holistic.scss */
@@ -1628,8 +1628,8 @@ picture {
 /* line 56, src/scss/_components/homepage/_advantages.scss */
 #advantages .advantages__box-title {
   padding-top: 25px;
-  padding-bottom: 10px;
-  font-size: 17px;
+  padding-bottom: 15px;
+  font-size: 18px;
   color: #0085cc;
   font-weight: bold;
 }
@@ -1681,13 +1681,13 @@ picture {
 
 /* line 34, src/scss/_components/homepage/_welcome.scss */
 #welcome .welcome__title {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   text-align: left;
 }
 
 /* line 39, src/scss/_components/homepage/_welcome.scss */
 #welcome .welcome__subtitle {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   font-weight: 700;
   font-size: 18px;
 }
