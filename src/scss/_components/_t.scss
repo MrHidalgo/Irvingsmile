@@ -1,5 +1,9 @@
 // SECTION :: START
 
-.section {}
+#section {
+	.section {
+		&__wrapper {}
+	}
+}
 
 // SECTION :: END

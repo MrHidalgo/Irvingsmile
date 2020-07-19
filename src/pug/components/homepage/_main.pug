@@ -1,0 +1,74 @@
+// SECTION :: START
+
+section#main.section
+	.main__conatiner
+
+			.main__wrapper
+
+				.main__slider
+
+					mixin swiperContent()
+						.swiper-slide(style='background-image:url("img/img-main-1.jpg");')
+							.swiper-slide-content
+								h1 Welcome to Professional Dental!
+								p A Holistic Approach Practice
+								.c-btn__wrapper
+									a.c-btn.c-btn--green(href="#")
+										span Book Now
+						.swiper-slide(style='background-image:url("img/img-main-2.jpg");')
+							.swiper-slide-content
+								h1 Emergency special: $59*
+								p Includes new patient exam, full mouth x-rays, & Prophy *in the absence of gum disease
+								.c-btn__wrapper
+									a.c-btn.c-btn--green(href="#")
+										span Book Now
+						.swiper-slide(style='background-image:url("img/img-main-3.jpg");')
+							.swiper-slide-content
+								h1 Free New Patient Exam
+								p Includes X-Rays & Oral Cancer Screening
+								.c-btn__wrapper
+									a.c-btn.c-btn--green(href="#")
+										span Book Now
+						.swiper-slide(style='background-image:url("img/img-main-4.png");')
+							.swiper-slide-content
+								h1 Free Implant Consultations
+								.c-btn__wrapper
+									a.c-btn.c-btn--green(href="#")
+										span Book Now
+						.swiper-slide(style='background-image:url("img/img-main-5.png");')
+							.swiper-slide-content
+								h1 Free First Session of Invisalign
+								.c-btn__wrapper
+									a.c-btn.c-btn--green(href="#")
+										span Book Now
+						.swiper-slide(style='background-image:url("img/img-main-6.jpg");')
+							.swiper-slide-content
+								h1 Having Trouble Sleeping?
+								p Visit Our Office in Irving to Get Sleep Apnea Treatment
+								.c-btn__wrapper
+									a.c-btn.c-btn--green(href="#")
+										span Book Now
+						.swiper-slide(style='background-image:url("img/img-main-7.jpg");')
+							.swiper-slide-content
+								h1 We Replace Missing Teeth and Improve Your Confidence!
+								.c-btn__wrapper
+									a.c-btn.c-btn--green(href="#")
+										span Book Now
+						.swiper-slide(style='background-image:url("img/img-main-8.jpg");')
+							.swiper-slide-content
+								h1 Problems with sleep apnea?
+								p Book a free Consultation
+								.c-btn__wrapper
+									a.c-btn.c-btn--green(href="#")
+										span Book Now
+						.swiper-slide(style='background-image:url("img/img-main-9.jpg");')
+							.swiper-slide-content
+								h1 Invisalign
+								p!= "$3800 for 10 trays or less <br>$5500 for full set"
+								.c-btn__wrapper
+									a.c-btn.c-btn--green(href="#")
+										span Book Now
+
+					+swiper('mainSwiper', 'swiperContent', true, false, false)
+
+// SECTION :: END

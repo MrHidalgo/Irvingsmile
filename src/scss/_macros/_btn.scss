@@ -1,58 +1,48 @@
 // BUTTON :: START
 
-// ==================================================
-// ==================================================
-// ==================================================
-
-$bth-width: 250px;
-$bth-height: 45px;
-$btn-border-width: 1px;
-$btn-border-color: rgba(#000, 1);
-$bth-border-radius: 5px;
-$bth-box-shadow: none;
-$bth-background-color: rgba(#000, 1);
-$bth-color: rgba(#fff, 1);
-$bth-font-size: rgba(#000, 1);
-$bth-font-weight: bold;
-
-$btn-color--border: rgba(#000, 1);
-
-// ==================================================
-// ==================================================
-// ==================================================
-
 .c-btn {
   outline: none;
-  cursor: pointer;
+	cursor: pointer;
+	position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: $bth-width;
-  height: $bth-height;
-  border: $btn-border-width solid $btn-border-color;
-  box-shadow: $bth-box-shadow;
-  border-radius: $bth-border-radius;
-  color: $bth-color;
-  font-size: $bth-font-size;
-  font-weight: $bth-font-weight;
+  height: 45px;
+	padding-left: 15px;
+	padding-right: 15px;
+  box-shadow: none;
+	border: 1px solid transparent;
+  border-radius: 0;
+	background-color: transparent;
+	@include transition(background-color);
 
-  &--border {
-    background-color: transparent;
-    color: $btn-color--border;
-  }
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
 
-  &--bg {
-    background-color: $bth-background-color;
-  }
+	span {
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		@include transition(color);
+	}
 
-  &__text {
-    &-wrap {}
-  }
+	&--green {
+		border-color: #7bc143;
+		background-color: #7bc143;
 
-  &__icon {
-    &-wrap {}
-  }
+		&:hover {
+			background-color: #ffffff;
+			@include transition(background-color);
+
+			span {
+				color: #7bc143;
+				@include transition(color);
+			}
+		}
+	}
 }
 
 // BUTTON :: END
