@@ -1,0 +1,59 @@
+// SECTION :: START
+
+#welcome {
+	.welcome {
+		&__wrapper {
+			display: flex;
+			align-items: center;
+			height: 530px;
+
+			&-left,
+			&-right {
+				width: 50%;
+				min-height: 100%;
+			}
+
+			&-left {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				max-width: 585px;
+				margin-left: auto;
+				margin-right: auto;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			&-right {
+				overflow: hidden;
+				position: relative;
+
+				img {
+					@extend %imageResCoverAbs;
+				}
+			}
+		}
+
+		&__title {
+			padding-bottom: 30px;
+			text-align: left;
+		}
+
+		&__subtitle {
+			padding-bottom: 30px;
+			font-weight: 700;
+			font-size: 18px;
+		}
+
+		&__desc {
+			font-size: 18px;
+			font-weight: 300;
+
+			&:not(:last-of-type) {
+				padding-bottom: 15px;
+			}
+		}
+	}
+}
+
+// SECTION :: END
