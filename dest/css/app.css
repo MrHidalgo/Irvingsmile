@@ -855,12 +855,13 @@ picture {
   font-weight: bold;
   font-size: 15px;
   color: #ffffff;
+  line-height: 1.8;
 }
 
 /* line 3, src/scss/_components/homepage/_advantages.scss */
 #advantages {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 /* line 10, src/scss/_components/homepage/_advantages.scss */
@@ -955,6 +956,7 @@ picture {
   font-size: 16px;
   color: #6d6e71;
   font-weight: 300;
+  line-height: 1.8;
 }
 
 /* line 5, src/scss/_components/homepage/_welcome.scss */
@@ -963,20 +965,15 @@ picture {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 530px;
 }
 
-/* line 10, src/scss/_components/homepage/_welcome.scss */
+/* line 8, src/scss/_components/homepage/_welcome.scss */
 #welcome .welcome__wrapper-left, #welcome .welcome__wrapper-right {
   width: 50%;
   min-height: 100%;
 }
 
-/* line 16, src/scss/_components/homepage/_welcome.scss */
+/* line 14, src/scss/_components/homepage/_welcome.scss */
 #welcome .welcome__wrapper-left {
   display: -webkit-box;
   display: -webkit-flex;
@@ -990,38 +987,88 @@ picture {
   max-width: 585px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 50px 15px;
 }
 
-/* line 27, src/scss/_components/homepage/_welcome.scss */
+/* line 24, src/scss/_components/homepage/_welcome.scss */
 #welcome .welcome__wrapper-right {
   overflow: hidden;
   position: relative;
 }
 
-/* line 37, src/scss/_components/homepage/_welcome.scss */
+/* line 34, src/scss/_components/homepage/_welcome.scss */
 #welcome .welcome__title {
   padding-bottom: 30px;
   text-align: left;
 }
 
-/* line 42, src/scss/_components/homepage/_welcome.scss */
+/* line 39, src/scss/_components/homepage/_welcome.scss */
 #welcome .welcome__subtitle {
   padding-bottom: 30px;
   font-weight: 700;
   font-size: 18px;
 }
 
-/* line 48, src/scss/_components/homepage/_welcome.scss */
+/* line 45, src/scss/_components/homepage/_welcome.scss */
 #welcome .welcome__desc {
   font-size: 18px;
   font-weight: 300;
+  line-height: 1.8;
 }
 
-/* line 52, src/scss/_components/homepage/_welcome.scss */
+/* line 50, src/scss/_components/homepage/_welcome.scss */
 #welcome .welcome__desc:not(:last-of-type) {
   padding-bottom: 15px;
+}
+
+/* line 3, src/scss/_components/homepage/_services.scss */
+#services {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+/* line 10, src/scss/_components/homepage/_services.scss */
+#services .services__title {
+  padding-bottom: 50px;
+}
+
+/* line 17, src/scss/_components/homepage/_services.scss */
+#services .swiper-slide-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 24, src/scss/_components/homepage/_services.scss */
+#services .swiper-slide-box:hover p {
+  color: #85c440;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+/* line 30, src/scss/_components/homepage/_services.scss */
+#services .swiper-slide-box p {
+  padding-top: 20px;
+  color: #137bbf;
+  font-size: 20px;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

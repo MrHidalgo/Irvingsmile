@@ -69,7 +69,7 @@ var initSvg4everybody = function initSvg4everybody() {
 var initSwiper = function initSwiper() {
 
   var mainSwiper = new Swiper('.mainSwiper', {
-    loop: false,
+    loop: true,
     grabCursor: true,
     freeMode: false,
     effect: 'fade',
@@ -86,6 +86,19 @@ var initSwiper = function initSwiper() {
       el: '.swiper-pagination',
       clickable: true
     }
+  });
+
+  var servicesSwiper = new Swiper('.servicesSwiper', {
+    loop: true,
+    grabCursor: true,
+    freeMode: false,
+    effect: 'slide',
+    autoplay: {
+      delay: 7500
+    },
+    speed: 1000,
+    slidesPerView: 4,
+    spaceBetween: 20
   });
 };
 

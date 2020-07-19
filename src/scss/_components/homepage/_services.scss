@@ -1,0 +1,41 @@
+// SECTION :: START
+
+#services {
+	padding-top: 75px;
+	padding-bottom: 75px;
+
+	.services {
+		&__wrapper {}
+
+		&__title {
+			padding-bottom: 50px;
+		}
+	}
+
+	.swiper {
+		&-slide {
+			&-box {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+
+				&:hover {
+					p {
+						color: #85c440;
+						@include transition(color);
+					}
+				}
+
+				p {
+					padding-top: 20px;
+					color: #137bbf;
+					font-size: 20px;
+					@include transition(color);
+				}
+			}
+		}
+	}
+}
+
+// SECTION :: END

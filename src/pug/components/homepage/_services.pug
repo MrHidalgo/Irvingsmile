@@ -1,0 +1,48 @@
+// SECTION :: START
+
+section#services.section
+	.services__conatiner
+
+		.c-grid
+
+			p.services__title.c-title Services
+
+			.services__wrapper
+
+				.services__slider
+
+					mixin swiperContent()
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								.swiper-slide-box-head
+									img(src="img/img-services-1.png" alt="")
+								.swiper-slide-box-body
+									p Invisalign®
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								.swiper-slide-box-head
+									img(src="img/img-services-2.png" alt="")
+								.swiper-slide-box-body
+									p Teeth Whitening
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								.swiper-slide-box-head
+									img(src="img/img-services-3.png" alt="")
+								.swiper-slide-box-body
+									p Dental Implants
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								.swiper-slide-box-head
+									img(src="img/img-services-4.png" alt="")
+								.swiper-slide-box-body
+									p Snap On Smile
+						.swiper-slide
+							a.swiper-slide-box(href="#")
+								.swiper-slide-box-head
+									img(src="img/img-services-5.png" alt="")
+								.swiper-slide-box-body
+									p Dental Veneers
+
+					+swiper('servicesSwiper', 'swiperContent', false, false, false)
+
+// SECTION :: END

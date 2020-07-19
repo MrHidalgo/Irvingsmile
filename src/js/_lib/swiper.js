@@ -8,7 +8,7 @@
 const initSwiper = () => {
 
   const mainSwiper = new Swiper('.mainSwiper', {
-    loop: false,
+    loop: true,
     grabCursor: true,
     freeMode: false,
     effect: 'fade',
@@ -25,5 +25,18 @@ const initSwiper = () => {
       el: '.swiper-pagination',
       clickable: true
     },
+  });
+
+  const servicesSwiper = new Swiper('.servicesSwiper', {
+    loop: true,
+    grabCursor: true,
+    freeMode: false,
+    effect: 'slide',
+    autoplay: {
+      delay: 7500
+    },
+		speed: 1000,
+    slidesPerView: 4,
+    spaceBetween: 20,
   });
 };
