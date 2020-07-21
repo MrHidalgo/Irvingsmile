@@ -2017,6 +2017,11 @@ picture {
 #book {
   padding-top: 75px;
   padding-bottom: 75px;
+  background-image: url("../img/img-book-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 
 @media screen and (max-width: 767px) {
@@ -2024,15 +2029,16 @@ picture {
   #book {
     padding-top: 50px;
     padding-bottom: 50px;
+    background-position: left center;
   }
 }
 
-/* line 14, src/scss/_components/homepage/_book.scss */
+/* line 19, src/scss/_components/homepage/_book.scss */
 #book .book__title {
   padding-bottom: 50px;
 }
 
-/* line 21, src/scss/_components/homepage/_book.scss */
+/* line 26, src/scss/_components/homepage/_book.scss */
 .book__form {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2045,12 +2051,12 @@ picture {
           flex-direction: column;
 }
 
-/* line 25, src/scss/_components/homepage/_book.scss */
+/* line 30, src/scss/_components/homepage/_book.scss */
 .book__form-group, .book__form-field {
   padding-bottom: 15px;
 }
 
-/* line 30, src/scss/_components/homepage/_book.scss */
+/* line 35, src/scss/_components/homepage/_book.scss */
 .book__form-group {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2063,7 +2069,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 30, src/scss/_components/homepage/_book.scss */
+  /* line 35, src/scss/_components/homepage/_book.scss */
   .book__form-group {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -2071,7 +2077,7 @@ picture {
   }
 }
 
-/* line 37, src/scss/_components/homepage/_book.scss */
+/* line 42, src/scss/_components/homepage/_book.scss */
 .book__form-group > div {
   width: 100%;
   max-width: -webkit-calc((100% - 30px) / 3);
@@ -2079,17 +2085,17 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 37, src/scss/_components/homepage/_book.scss */
+  /* line 42, src/scss/_components/homepage/_book.scss */
   .book__form-group > div {
     max-width: 100%;
   }
-  /* line 43, src/scss/_components/homepage/_book.scss */
+  /* line 48, src/scss/_components/homepage/_book.scss */
   .book__form-group > div:not(:last-of-type) {
     padding-bottom: 15px;
   }
 }
 
-/* line 50, src/scss/_components/homepage/_book.scss */
+/* line 55, src/scss/_components/homepage/_book.scss */
 .book__form-label {
   position: relative;
   display: -webkit-box;
@@ -2099,7 +2105,7 @@ picture {
   width: 100%;
 }
 
-/* line 56, src/scss/_components/homepage/_book.scss */
+/* line 61, src/scss/_components/homepage/_book.scss */
 .book__form-label.book__form-label--arrow .icon-arrow {
   position: absolute;
   top: 0;
@@ -2124,12 +2130,12 @@ picture {
   color: #7bc143;
 }
 
-/* line 69, src/scss/_components/homepage/_book.scss */
+/* line 74, src/scss/_components/homepage/_book.scss */
 .book__form-label.book__form-label--arrow .book__form-input {
   padding-right: 35px;
 }
 
-/* line 75, src/scss/_components/homepage/_book.scss */
+/* line 80, src/scss/_components/homepage/_book.scss */
 .book__form-input, .book__form-textarea {
   outline: none;
   position: relative;
@@ -2175,13 +2181,13 @@ picture {
   color: #6d6e71;
 }
 
-/* line 93, src/scss/_components/homepage/_book.scss */
+/* line 98, src/scss/_components/homepage/_book.scss */
 .book__form-textarea {
   resize: none;
   padding-top: 12px;
 }
 
-/* line 98, src/scss/_components/homepage/_book.scss */
+/* line 103, src/scss/_components/homepage/_book.scss */
 .book__form-radio {
   position: relative;
   width: 100%;
@@ -2189,7 +2195,7 @@ picture {
   height: 40px;
 }
 
-/* line 104, src/scss/_components/homepage/_book.scss */
+/* line 109, src/scss/_components/homepage/_book.scss */
 .book__form-radio input {
   opacity: 0;
   visibility: hidden;
@@ -2198,7 +2204,7 @@ picture {
   height: 0;
 }
 
-/* line 112, src/scss/_components/homepage/_book.scss */
+/* line 117, src/scss/_components/homepage/_book.scss */
 .book__form-radio input:checked + .book__form-label {
   background-color: #7bc143;
   color: #ffffff;
@@ -2207,7 +2213,7 @@ picture {
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-/* line 120, src/scss/_components/homepage/_book.scss */
+/* line 125, src/scss/_components/homepage/_book.scss */
 .book__form-radio .book__form-label {
   cursor: pointer;
   display: -webkit-box;
@@ -2235,7 +2241,7 @@ picture {
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-/* line 136, src/scss/_components/homepage/_book.scss */
+/* line 141, src/scss/_components/homepage/_book.scss */
 .book__form-radio-group {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2243,7 +2249,7 @@ picture {
   display: flex;
 }
 
-/* line 141, src/scss/_components/homepage/_book.scss */
+/* line 146, src/scss/_components/homepage/_book.scss */
 .book__form .c-btn__wrapper {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -2252,22 +2258,22 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 141, src/scss/_components/homepage/_book.scss */
+  /* line 146, src/scss/_components/homepage/_book.scss */
   .book__form .c-btn__wrapper {
     width: 100%;
   }
-  /* line 146, src/scss/_components/homepage/_book.scss */
+  /* line 151, src/scss/_components/homepage/_book.scss */
   .book__form .c-btn__wrapper .c-btn {
     width: 100%;
   }
 }
 
-/* line 153, src/scss/_components/homepage/_book.scss */
+/* line 158, src/scss/_components/homepage/_book.scss */
 .book__dropdown {
   position: relative;
 }
 
-/* line 156, src/scss/_components/homepage/_book.scss */
+/* line 161, src/scss/_components/homepage/_book.scss */
 .book__dropdown-toggle {
   position: relative;
   display: -webkit-box;
@@ -2285,7 +2291,7 @@ picture {
   color: #6d6e71;
 }
 
-/* line 166, src/scss/_components/homepage/_book.scss */
+/* line 171, src/scss/_components/homepage/_book.scss */
 .book__dropdown-toggle .icon-arrow {
   position: absolute;
   top: 0;
@@ -2310,7 +2316,7 @@ picture {
   color: #7bc143;
 }
 
-/* line 180, src/scss/_components/homepage/_book.scss */
+/* line 185, src/scss/_components/homepage/_book.scss */
 .book__dropdown-wrapper {
   overflow-y: auto;
   z-index: 100;
@@ -2327,7 +2333,7 @@ picture {
   max-height: 160px;
 }
 
-/* line 192, src/scss/_components/homepage/_book.scss */
+/* line 197, src/scss/_components/homepage/_book.scss */
 .book__dropdown-link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2346,7 +2352,7 @@ picture {
   transition: background-color 0.4s ease-in-out;
 }
 
-/* line 201, src/scss/_components/homepage/_book.scss */
+/* line 206, src/scss/_components/homepage/_book.scss */
 .book__dropdown-link:hover, .book__dropdown-link.is-active {
   background-color: #137bbf;
   -webkit-transition: background-color 0.4s ease-in-out;
@@ -2354,7 +2360,7 @@ picture {
   transition: background-color 0.4s ease-in-out;
 }
 
-/* line 207, src/scss/_components/homepage/_book.scss */
+/* line 212, src/scss/_components/homepage/_book.scss */
 .book__dropdown-link:not(:last-of-type) {
   border-bottom: 1px solid #fff;
 }

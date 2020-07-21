@@ -3,9 +3,14 @@
 #book {
 	padding-top: 75px;
 	padding-bottom: 75px;
+	background-image: url('../img/img-book-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	@include adaptive(767) {
 		padding-top: 50px;
 		padding-bottom: 50px;
+		background-position: left center;
 	}
 
 	.book {
