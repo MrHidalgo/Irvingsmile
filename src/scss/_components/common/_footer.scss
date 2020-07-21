@@ -2,7 +2,7 @@
 
 .footer {
 	padding-top: 75px;
-	padding-bottom: 75px;
+	padding-bottom: 25px;
 	background-color: #7bc143;
 
 	&__wrapper {
@@ -27,6 +27,9 @@
 			width: 100%;
 			max-width: 500px;
 			padding-right: 15px;
+			@include adaptive(1365) {
+				max-width: 400px;
+			}
 
 			.c-btn__wrapper {
 				padding-bottom: 30px;

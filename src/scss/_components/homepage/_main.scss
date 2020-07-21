@@ -10,6 +10,9 @@
 	.swiper {
 		&-container {
 			height: 800px;
+			@include adaptive(1365) {
+				height: 700px;
+			}
 		}
 
 		&-pagination {
@@ -68,6 +71,9 @@
 				max-width: 40%;
 				padding-left: 15px;
 				padding-right: 40px;
+				@include adaptive(1365) {
+					max-width: 45%;
+				}
 
 				h1,
 				p {
