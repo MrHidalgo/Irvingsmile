@@ -9,9 +9,12 @@ header#header.header
 
 				.logo.logo--header
 					a.logo__brn(href="#")
-						img.logo__img(src="img/logo.png" alt="")
+						img.logo__img.logo__img--desktop(src="img/logo.png" alt="")
+						img.logo__img.logo__img--mobile(src="img/logo-small.png" alt="")
 
-			.header__wrapper-right
+				+hamburger()
+
+			.header__wrapper-right(mobile-block-js)
 				div
 
 					.header__info
@@ -25,11 +28,13 @@ header#header.header
 				div
 
 					nav.header__nav
-						a.header__nav-link(href="#")
-							span Virtual Consultations
+						.header__nav-link-wrapper(header-nav-wr-js)
+							a.header__nav-link(href="#")
+								span Virtual Consultations
 						.header__nav-link-wrapper(header-nav-wr-js)
 							a.header__nav-link(href="#")
 								span About
+								i.icon-font.icon-arrow
 							.header__nav-link-drop
 								a(href="#") Meet Dr. Sonya Reddy
 								a(href="#") Blog
@@ -37,6 +42,7 @@ header#header.header
 						.header__nav-link-wrapper(header-nav-wr-js)
 							a.header__nav-link(href="#")
 								span Patients
+								i.icon-font.icon-arrow
 							.header__nav-link-drop
 								a(href="#") Smile Gallery
 								a(href="#") Patient Forms
@@ -44,6 +50,7 @@ header#header.header
 						.header__nav-link-wrapper(header-nav-wr-js)
 							a.header__nav-link(href="#")
 								span General
+								i.icon-font.icon-arrow
 							.header__nav-link-drop
 								a(href="#") Airway Focused Dentistry and TMJ
 								a(href="#") Biological Periodontal Therapy
@@ -62,6 +69,7 @@ header#header.header
 						.header__nav-link-wrapper(header-nav-wr-js)
 							a.header__nav-link(href="#")
 								span Cosmetic
+								i.icon-font.icon-arrow
 							.header__nav-link-drop
 								a(href="#") Dental Implants
 								a(href="#") Same-Day CEREC Crowns

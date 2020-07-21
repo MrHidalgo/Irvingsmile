@@ -11,6 +11,9 @@
 		max-width: 1600px;
 		margin-left: auto;
 		margin-right: auto;
+		@include adaptive(1279) {
+			flex-wrap: wrap;
+		}
 
 		&-1 {
 			padding-bottom: 50px;
@@ -30,6 +33,12 @@
 			@include adaptive(1365) {
 				max-width: 400px;
 			}
+			@include adaptive(1279) {
+				order: 2;
+				max-width: 100%;
+				padding-right: 0;
+				align-items: center;
+			}
 
 			.c-btn__wrapper {
 				padding-bottom: 30px;
@@ -41,6 +50,10 @@
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
+			@include adaptive(1279) {
+				order: 1;
+				padding-bottom: 30px;
+			}
 
 			> div {
 				&:nth-of-type(1) {
@@ -149,6 +162,10 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+			@include adaptive(1279) {
+				align-items: center;
+				text-align: center;
+			}
 		}
 
 		.icon-font,

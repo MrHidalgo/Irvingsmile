@@ -16,6 +16,34 @@
 * */
 
 /**
+ * @name initHamburger
+ *
+ * @description Init hamburger logic with animated
+ */
+var initHamburger = function initHamburger() {
+
+	var btn = document.querySelector("[hamburger-js]"),
+	    hideScrollContainer = document.querySelectorAll("html, body"),
+	    mobileContainer = document.querySelector("[mobile-block-js]");
+
+	/**
+   * @description
+  */
+	if (btn) {
+		btn.addEventListener("click", function (ev) {
+			var elem = ev.currentTarget;
+
+			elem.classList.toggle("is-active");
+			mobileContainer.classList.toggle("is-open");
+
+			hideScrollContainer.forEach(function (val, idx) {
+				val.classList.toggle("is-hideScroll");
+			});
+		});
+	}
+};
+
+/**
  * @name initHeaderFixed
  *
  * @description Fixing the site header in the scrolling page.
@@ -100,7 +128,21 @@ var initSwiper = function initSwiper() {
 		},
 		speed: 1000,
 		slidesPerView: 4,
-		spaceBetween: 20
+		spaceBetween: 20,
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 20
+			}
+		}
 	});
 
 	var promotionsSwiper = new Swiper('.promotionsSwiper', {
@@ -121,6 +163,20 @@ var initSwiper = function initSwiper() {
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 40
+			}
 		}
 	});
 
@@ -222,9 +278,22 @@ window.addEventListener('scroll', function (ev) {
 
 	var headerNavLinkWrapper = function headerNavLinkWrapper() {
 		$('[header-nav-wr-js]').hover(function (ev) {
-			$(ev.currentTarget).addClass('is-hover').stop(true, true);
+			if ($(window).width() > 1279) {
+				$(ev.currentTarget).addClass('is-hover').stop(true, true);
+			}
 		}, function (ev) {
-			$(ev.currentTarget).removeClass('is-hover').stop(true, true);
+			if ($(window).width() > 1279) {
+				$(ev.currentTarget).removeClass('is-hover').stop(true, true);
+			}
+		});
+
+		$('[header-nav-wr-js]').on('click', function (ev) {
+			if ($(ev.currentTarget).find('.header__nav-link-drop').is(':visible')) {
+				$(ev.currentTarget).find('.header__nav-link-drop').slideUp(350);
+			} else {
+				$('[header-nav-wr-js] .header__nav-link-drop').slideUp(350);
+				$(ev.currentTarget).find('.header__nav-link-drop').slideDown(350);
+			}
 		});
 	};
 	/*
@@ -243,6 +312,7 @@ window.addEventListener('scroll', function (ev) {
 
 		// lib
 		initSwiper();
+		initHamburger();
 		// ==========================================
 
 		// callback

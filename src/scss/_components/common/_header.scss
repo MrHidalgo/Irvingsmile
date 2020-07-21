@@ -42,6 +42,10 @@
 	.c-grid-fluid {
 		padding-left: 50px;
 		padding-right: 50px;
+		@include adaptive(1279) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 	}
 
 	&__wrapper {
@@ -51,12 +55,61 @@
 		padding-top: 40px;
 		padding-bottom: 15px;
 		@include transition(padding-top);
+		@include adaptive(1279) {
+			padding-top: 15px;
+		}
+
+		&-left {
+			@include adaptive(1279) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+			}
+		}
 
 		&-right {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
 			justify-content: space-between;
+			@include adaptive(1279) {
+				z-index: 1100;
+				opacity: 0;
+				visibility: hidden;
+				transform: translateX(-100%);
+				overflow-y: auto;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 400px;
+				height: 100%;
+				min-height: 100%;
+				max-height: 100%;
+				padding-top: 75px;
+				padding-bottom: 30px;
+				box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+				background-color: rgba(11,62,106, 0.95);
+				@include transition(opacity, visibility, transform);
+
+				&.is-open {
+					opacity: 1;
+					visibility: visible;
+					transform: translateX(0);
+					@include transition(opacity, visibility, transform);
+				}
+
+				> div {
+					width: 100%;
+
+					&:nth-of-type(1) {
+						order: 2;
+					}
+					&:nth-of-type(2) {
+						order: 1;
+					}
+				}
+			}
 		}
 	}
 
@@ -64,12 +117,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+		@include adaptive(1279) {
+			flex-direction: column;
+			padding-top: 30px;
+		}
 
 		&-link {
 			display: flex;
 			align-items: center;
 			color: #ffffff;
 			@include transition(color);
+			@include adaptive(1279) {
+				min-height: 50px;
+			}
 
 			&:hover {
 				color: #337ab7;
@@ -78,6 +138,9 @@
 
 			&:not(:first-child) {
 				margin-left: 30px;
+				@include adaptive(1279) {
+					margin-left: 0;
+				}
 			}
 
 			.icon-font {
@@ -100,6 +163,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+		@include adaptive(1279) {
+			flex-direction: column;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 
 		&-link {
 			position: relative;
@@ -111,17 +179,15 @@
 			font-weight: 600;
 			text-transform: uppercase;
 			@include transition(color);
-
-			//&:hover {
-			//	color: #337ab7;
-			//	@include transition(color);
-			//
-			//	&:before,
-			//	&:after {
-			//		width: 50%;
-			//		@include transition(width);
-			//	}
-			//}
+			@include adaptive(1279) {
+				justify-content: space-between;
+				width: 100%;
+				min-height: 50px;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-right: 0;
+				border-bottom: 1px solid #fff;
+			}
 
 			&:before,
 			&:after {
@@ -132,6 +198,9 @@
 				height: 2px;
 				background-color: #337ab7;
 				@include transition(width);
+				@include adaptive(1279) {
+					background-color: #7bc143;
+				}
 			}
 
 			&:before {
@@ -142,8 +211,20 @@
 				right: 50%;
 			}
 
+			.icon-font {
+				display: none;
+				transform: rotate(-90deg);
+				font-size: 12px;
+				@include adaptive(1279) {
+					display: flex;
+				}
+			}
+
 			&-wrapper {
 				position: relative;
+				@include adaptive(1279) {
+					width: 100%;
+				}
 
 				&.is-hover {
 					.header__nav {
@@ -186,6 +267,15 @@
 				backface-visibility: hidden;
 				transform-origin: center;
 				@include transition(opacity, visibility, transform);
+				@include adaptive(1279) {
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+					display: none;
+					position: static;
+					width: 100%;
+					max-height: unset;
+				}
 
 				a {
 					display: flex;
@@ -201,6 +291,14 @@
 					font-weight: 600;
 					text-transform: uppercase;
 					@include transition(background-color);
+					@include adaptive(1279) {
+						justify-content: flex-start;
+						text-align: left;
+
+						&:not(:last-of-type) {
+							border-bottom: 1px solid #fff;
+						}
+					}
 
 					&:hover {
 						background-color: #7bc143;
@@ -208,6 +306,26 @@
 					}
 				}
 			}
+		}
+	}
+
+	.c-btn {
+		@include adaptive(1279) {
+			width: 100%;
+		}
+
+		&__wrapper {
+			@include adaptive(1279) {
+				width: 100%;
+				padding-top: 30px;
+			}
+		}
+	}
+
+	.hamburger {
+		display: none;
+		@include adaptive(1279) {
+			display: flex;
 		}
 	}
 }

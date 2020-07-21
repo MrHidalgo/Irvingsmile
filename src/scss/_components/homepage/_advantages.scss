@@ -28,10 +28,21 @@
 			&-wrapper {
 				display: flex;
 				justify-content: space-between;
+				@include adaptive(1023) {
+					flex-wrap: wrap;
+				}
 
 				> div {
 					width: 100%;
 					max-width: calc((100% - 60px) / 4);
+					@include adaptive(1023) {
+						max-width: calc((100% - 20px) / 2);
+
+						&:nth-of-type(1),
+						&:nth-of-type(2) {
+							padding-bottom: 20px;
+						}
+					}
 				}
 			}
 

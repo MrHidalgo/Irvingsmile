@@ -36,12 +36,25 @@
 	const headerNavLinkWrapper = () => {
 		$('[header-nav-wr-js]').hover(
 			(ev) => {
-				$(ev.currentTarget).addClass('is-hover').stop(true, true);
+				if($(window).width() > 1279) {
+					$(ev.currentTarget).addClass('is-hover').stop(true, true);
+				}
 			},
 			(ev) => {
-				$(ev.currentTarget).removeClass('is-hover').stop(true, true);
+				if($(window).width() > 1279) {
+					$(ev.currentTarget).removeClass('is-hover').stop(true, true);
+				}
 			}
 		);
+
+		$('[header-nav-wr-js]').on('click', (ev) => {
+			if($(ev.currentTarget).find('.header__nav-link-drop').is(':visible')) {
+				$(ev.currentTarget).find('.header__nav-link-drop').slideUp(350);
+			} else {
+				$('[header-nav-wr-js] .header__nav-link-drop').slideUp(350);
+				$(ev.currentTarget).find('.header__nav-link-drop').slideDown(350);
+			}
+		});
 	};
 	/*
 	* CALLBACK :: end
@@ -60,6 +73,7 @@
 
 		// lib
 		initSwiper();
+		initHamburger();
 		// ==========================================
 
 		// callback
