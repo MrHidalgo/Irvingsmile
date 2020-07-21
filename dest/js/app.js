@@ -219,6 +219,14 @@ window.addEventListener('scroll', function (ev) {
 			elDrop.slideToggle(350).css({ display: 'flex' });
 		});
 	};
+
+	var headerNavLinkWrapper = function headerNavLinkWrapper() {
+		$('[header-nav-wr-js]').hover(function (ev) {
+			$(ev.currentTarget).addClass('is-hover').stop(true, true);
+		}, function (ev) {
+			$(ev.currentTarget).removeClass('is-hover').stop(true, true);
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -240,6 +248,7 @@ window.addEventListener('scroll', function (ev) {
 		// callback
 		initDatePicker();
 		dropdown();
+		headerNavLinkWrapper();
 		// ==========================================
 	};
 	initNative();

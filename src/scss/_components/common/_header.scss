@@ -11,13 +11,30 @@
 
 	&.header--fixed {
 		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
-		background-color: rgba(11,62,106, 0.75);
+		background-color: rgba(11,62,106, 0.85);
 		@include transition(box-shadow, background-color);
 
 		.header {
 			&__wrapper {
 				padding-top: 15px;
 				@include transition(padding-top);
+			}
+
+			&__nav {
+				&-link {
+					&-wrapper {
+						&.is-hover {
+							.header__nav-link {
+								color: #7bc143;
+
+								&:before,
+								&:after {
+									background-color: #7bc143;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -95,16 +112,16 @@
 			text-transform: uppercase;
 			@include transition(color);
 
-			&:hover {
-				color: #337ab7;
-				@include transition(color);
-
-				&:before,
-				&:after {
-					width: 50%;
-					@include transition(width);
-				}
-			}
+			//&:hover {
+			//	color: #337ab7;
+			//	@include transition(color);
+			//
+			//	&:before,
+			//	&:after {
+			//		width: 50%;
+			//		@include transition(width);
+			//	}
+			//}
 
 			&:before,
 			&:after {
@@ -117,13 +134,79 @@
 				@include transition(width);
 			}
 
-
 			&:before {
 				left: 50%;
 			}
 
 			&:after {
 				right: 50%;
+			}
+
+			&-wrapper {
+				position: relative;
+
+				&.is-hover {
+					.header__nav {
+						&-link {
+							color: #337ab7;
+							@include transition(color);
+
+							&:before,
+							&:after {
+								width: 50%;
+								@include transition(width);
+							}
+
+							&-drop {
+								opacity: 1;
+								visibility: visible;
+								transform: translateY(0);
+								@include transition(opacity, visibility, transform);
+							}
+						}
+					}
+				}
+			}
+
+			&-drop {
+				opacity: 0;
+				visibility: hidden;
+				transform: translateY(10px);
+				overflow: hidden auto;
+				z-index: 500;
+				position: absolute;
+				top: calc(100% + 10px);
+				right: 25px;
+				width: 270px;
+				display: flex;
+				flex-direction: column;
+				max-height: calc(45px * 5);
+				background-color: #137bbf;
+				box-shadow: 0 1px 5px 0 rgba(#000, 0.15);
+				backface-visibility: hidden;
+				transform-origin: center;
+				@include transition(opacity, visibility, transform);
+
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					min-height: 45px;
+					padding-left: 15px;
+					padding-right: 15px;
+					text-align: right;
+					color: #ffffff;
+					font-size: 15px;
+					line-height: 1.1;
+					font-weight: 600;
+					text-transform: uppercase;
+					@include transition(background-color);
+
+					&:hover {
+						background-color: #7bc143;
+						@include transition(background-color);
+					}
+				}
 			}
 		}
 	}

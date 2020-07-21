@@ -31,6 +31,18 @@
 			elDrop.slideToggle(350).css({display:'flex'});
 		});
 	};
+
+
+	const headerNavLinkWrapper = () => {
+		$('[header-nav-wr-js]').hover(
+			(ev) => {
+				$(ev.currentTarget).addClass('is-hover').stop(true, true);
+			},
+			(ev) => {
+				$(ev.currentTarget).removeClass('is-hover').stop(true, true);
+			}
+		);
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -53,6 +65,7 @@
 		// callback
 		initDatePicker();
 		dropdown();
+		headerNavLinkWrapper();
 		// ==========================================
 	};
 	initNative();
