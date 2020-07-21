@@ -54,12 +54,20 @@
 				order: 1;
 				padding-bottom: 30px;
 			}
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			> div {
 				&:nth-of-type(1) {
 					width: 100%;
 					max-width: 320px;
 					padding-right: 15px;
+					@include adaptive(767) {
+						max-width: 100%;
+						padding-right: 0;
+						padding-bottom: 50px;
+					}
 				}
 
 				&:nth-of-type(2) {
@@ -68,6 +76,9 @@
 					min-width: 1px;
 					max-width: 100%;
 					height: 100%;
+					@include adaptive(767) {
+						height: 400px;
+					}
 
 					iframe {
 						position: relative;
@@ -188,11 +199,19 @@
 		padding-bottom: 30px;
 		text-align: left;
 		color: #ffffff;
+		@include adaptive(767) {
+			text-align: center;
+		}
 	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
+		@include adaptive(767) {
+			width: 270px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 		li {
 			display: flex;

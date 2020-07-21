@@ -3,6 +3,10 @@
 #book {
 	padding-top: 75px;
 	padding-bottom: 75px;
+	@include adaptive(767) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 
 	.book {
 		&__wrapper {}
@@ -26,10 +30,20 @@
 		&-group {
 			display: flex;
 			justify-content: space-between;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			> div {
 				width: 100%;
 				max-width: calc((100% - 30px) / 3);
+				@include adaptive(767) {
+					max-width: 100%;
+
+					&:not(:last-of-type) {
+						padding-bottom: 15px;
+					}
+				}
 			}
 		}
 
@@ -126,6 +140,13 @@
 
 		.c-btn__wrapper {
 			justify-content: center;
+			@include adaptive(767) {
+				width: 100%;
+
+				.c-btn {
+					width: 100%;
+				}
+			}
 		}
 	}
 

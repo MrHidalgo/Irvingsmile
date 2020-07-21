@@ -1,10 +1,8 @@
 // SECTION :: START
 
 #main {
-	.main {
-		&__wrapper {
-
-		}
+	@include adaptive(767) {
+		margin-top: 80px;
 	}
 
 	.swiper {
@@ -16,6 +14,9 @@
 			@include adaptive(1279) {
 				height: 768px;
 			}
+			@include adaptive(767) {
+				height: 400px;
+			}
 		}
 
 		&-pagination {
@@ -24,6 +25,9 @@
 			align-items: center;
 			justify-content: center;
 			bottom: 15px;
+			@include adaptive(767) {
+				display: none;
+			}
 
 			&-bullet {
 				opacity: 1;
@@ -33,6 +37,12 @@
 				margin-right: 7px !important;
 				background-color: #7bc143;
 				@include transition(opacity, background-color);
+				@include adaptive(767) {
+					width: 8px;
+					height: 8px;
+					margin-left: 4px !important;
+					margin-right: 4px !important;
+				}
 
 				&:hover {
 					opacity: 0.55;
@@ -55,6 +65,9 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;
+			@include adaptive(767) {
+				align-items: flex-end;
+			}
 
 			&:after {
 				z-index: 0;
@@ -65,6 +78,12 @@
 				width: 100%;
 				height: 100%;
 				background-color: rgba(55, 52, 49, 0.5);
+				@include adaptive(767) {
+					top: auto;
+					bottom: 0;
+					height: 120px;
+					background-color: rgba(55, 52, 49, 0.75);
+				}
 			}
 
 			&-content {
@@ -82,6 +101,11 @@
 					padding-right: 20px;
 					text-align: right;
 				}
+				@include adaptive(767) {
+					max-width: 100%;
+					padding-left: 20px;
+					text-align: center;
+				}
 
 				h1,
 				p {
@@ -92,16 +116,31 @@
 					padding-bottom: 10px;
 					font-size: 35px;
 					font-weight: 900;
+					@include adaptive(767) {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						height: 120px;
+						padding-bottom: 0;
+						font-size: 26px;
+						line-height: 1.3;
+					}
 				}
 
 				p {
 					padding-bottom: 20px;
 					font-size: 25px;
+					@include adaptive(767) {
+						display: none;
+					}
 				}
 
 				.c-btn__wrapper {
 					@include adaptive(1279) {
 						justify-content: flex-end;
+					}
+					@include adaptive(767) {
+						display: none;
 					}
 				}
 			}

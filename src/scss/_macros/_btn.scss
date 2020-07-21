@@ -27,6 +27,9 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		@include transition(color);
+		@include adaptive(767) {
+			font-size: 16px;
+		}
 	}
 
 	&--green {
