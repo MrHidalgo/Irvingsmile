@@ -21,10 +21,15 @@ const initHamburger = () => {
 			elem.classList.toggle("is-active");
 			mobileContainer.classList.toggle("is-open");
 
-			hideScrollContainer.forEach((val, idx) => {
-				val.classList.toggle("is-hideScroll");
-			});
+			if($(btn).hasClass('is-active')) {
+				// some action
+			} else {
+				$(mobileContainer).addClass('is-animated');
 
+				setTimeout(() => {
+					$(mobileContainer).removeClass('is-animated');
+				}, 400);
+			}
 		});
 	}
 
