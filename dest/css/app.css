@@ -1069,15 +1069,14 @@ picture {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
-    min-height: 50px;
+    height: 50px;
     padding-left: 10px;
-    padding-right: 10px;
     margin-right: 0;
     border-bottom: 1px solid #fff;
   }
 }
 
-/* line 212, src/scss/_components/common/_header.scss */
+/* line 211, src/scss/_components/common/_header.scss */
 .header__nav-link:before, .header__nav-link:after {
   content: '';
   position: absolute;
@@ -1091,23 +1090,31 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 212, src/scss/_components/common/_header.scss */
+  /* line 211, src/scss/_components/common/_header.scss */
   .header__nav-link:before, .header__nav-link:after {
     background-color: #7bc143;
   }
 }
 
-/* line 226, src/scss/_components/common/_header.scss */
+/* line 225, src/scss/_components/common/_header.scss */
 .header__nav-link:before {
   left: 50%;
 }
 
-/* line 230, src/scss/_components/common/_header.scss */
+/* line 229, src/scss/_components/common/_header.scss */
 .header__nav-link:after {
   right: 50%;
 }
 
-/* line 234, src/scss/_components/common/_header.scss */
+@media screen and (max-width: 1279px) {
+  /* line 233, src/scss/_components/common/_header.scss */
+  .header__nav-link span {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* line 240, src/scss/_components/common/_header.scss */
 .header__nav-link .icon-font {
   display: none;
   -webkit-transform: rotate(-90deg);
@@ -1117,7 +1124,7 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 234, src/scss/_components/common/_header.scss */
+  /* line 240, src/scss/_components/common/_header.scss */
   .header__nav-link .icon-font {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1126,19 +1133,19 @@ picture {
   }
 }
 
-/* line 243, src/scss/_components/common/_header.scss */
+/* line 249, src/scss/_components/common/_header.scss */
 .header__nav-link-wrapper {
   position: relative;
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 243, src/scss/_components/common/_header.scss */
+  /* line 249, src/scss/_components/common/_header.scss */
   .header__nav-link-wrapper {
     width: 100%;
   }
 }
 
-/* line 251, src/scss/_components/common/_header.scss */
+/* line 257, src/scss/_components/common/_header.scss */
 .header__nav-link-wrapper.is-hover .header__nav-link {
   color: #337ab7;
   -webkit-transition: color 0.4s ease-in-out;
@@ -1146,7 +1153,7 @@ picture {
   transition: color 0.4s ease-in-out;
 }
 
-/* line 255, src/scss/_components/common/_header.scss */
+/* line 261, src/scss/_components/common/_header.scss */
 .header__nav-link-wrapper.is-hover .header__nav-link:before, .header__nav-link-wrapper.is-hover .header__nav-link:after {
   width: 50%;
   -webkit-transition: width 0.4s ease-in-out;
@@ -1154,7 +1161,7 @@ picture {
   transition: width 0.4s ease-in-out;
 }
 
-/* line 261, src/scss/_components/common/_header.scss */
+/* line 267, src/scss/_components/common/_header.scss */
 .header__nav-link-wrapper.is-hover .header__nav-link-drop {
   opacity: 1;
   visibility: visible;
@@ -1168,7 +1175,7 @@ picture {
   transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
-/* line 272, src/scss/_components/common/_header.scss */
+/* line 278, src/scss/_components/common/_header.scss */
 .header__nav-link-drop {
   opacity: 0;
   visibility: hidden;
@@ -1207,7 +1214,7 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 272, src/scss/_components/common/_header.scss */
+  /* line 278, src/scss/_components/common/_header.scss */
   .header__nav-link-drop {
     opacity: 1;
     visibility: visible;
@@ -1220,7 +1227,7 @@ picture {
   }
 }
 
-/* line 299, src/scss/_components/common/_header.scss */
+/* line 305, src/scss/_components/common/_header.scss */
 .header__nav-link-drop--big {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1234,25 +1241,25 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 299, src/scss/_components/common/_header.scss */
+  /* line 305, src/scss/_components/common/_header.scss */
   .header__nav-link-drop--big {
     width: 100%;
   }
 }
 
-/* line 307, src/scss/_components/common/_header.scss */
+/* line 313, src/scss/_components/common/_header.scss */
 .header__nav-link-drop--big a {
   width: 50%;
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 307, src/scss/_components/common/_header.scss */
+  /* line 313, src/scss/_components/common/_header.scss */
   .header__nav-link-drop--big a {
     width: 100%;
   }
 }
 
-/* line 315, src/scss/_components/common/_header.scss */
+/* line 321, src/scss/_components/common/_header.scss */
 .header__nav-link-drop a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1281,7 +1288,7 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 315, src/scss/_components/common/_header.scss */
+  /* line 321, src/scss/_components/common/_header.scss */
   .header__nav-link-drop a {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -1289,13 +1296,13 @@ picture {
             justify-content: flex-start;
     text-align: left;
   }
-  /* line 333, src/scss/_components/common/_header.scss */
+  /* line 339, src/scss/_components/common/_header.scss */
   .header__nav-link-drop a:not(:last-of-type) {
     border-bottom: 1px solid #fff;
   }
 }
 
-/* line 338, src/scss/_components/common/_header.scss */
+/* line 344, src/scss/_components/common/_header.scss */
 .header__nav-link-drop a:hover {
   background-color: #7bc143;
   -webkit-transition: background-color 0.4s ease-in-out;
@@ -1304,27 +1311,27 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 347, src/scss/_components/common/_header.scss */
+  /* line 353, src/scss/_components/common/_header.scss */
   .header .c-btn {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 352, src/scss/_components/common/_header.scss */
+  /* line 358, src/scss/_components/common/_header.scss */
   .header .c-btn__wrapper {
     width: 100%;
     padding-top: 30px;
   }
 }
 
-/* line 360, src/scss/_components/common/_header.scss */
+/* line 366, src/scss/_components/common/_header.scss */
 .header .hamburger {
   display: none;
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 360, src/scss/_components/common/_header.scss */
+  /* line 366, src/scss/_components/common/_header.scss */
   .header .hamburger {
     display: -webkit-box;
     display: -webkit-flex;

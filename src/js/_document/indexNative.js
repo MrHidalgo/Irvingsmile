@@ -47,22 +47,49 @@
 		// 	}
 		// );
 
-		$('[header-nav-wr-js]').on('click', (ev) => {
-			if($(window).width() < 1280) {
-				if($(ev.currentTarget).find('.header__nav-link-drop').is(':visible')) {
-					$(ev.currentTarget).find('.header__nav-link-drop').slideUp(350);
-				} else {
-					$('[header-nav-wr-js] .header__nav-link-drop').slideUp(350);
-					$(ev.currentTarget).find('.header__nav-link-drop').slideDown(350);
+		// $('[header-nav-wr-js]').on('click', (ev) => {
+		// 	if($(window).width() < 1280) {
+		// 		if($(ev.currentTarget).find('.header__nav-link-drop').is(':visible')) {
+		// 			$(ev.currentTarget).find('.header__nav-link-drop').slideUp(350);
+		// 		} else {
+		// 			$('[header-nav-wr-js] .header__nav-link-drop').slideUp(350);
+		// 			$(ev.currentTarget).find('.header__nav-link-drop').slideDown(350);
+		// 		}
+		// 	} else {
+		// 		if($(ev.currentTarget).hasClass('is-hover')) {
+		// 			$(ev.currentTarget).removeClass('is-hover');
+		// 		} else {
+		// 			$('[header-nav-wr-js]').removeClass('is-hover');
+		// 			$(ev.currentTarget).addClass('is-hover');
+		// 		}
+		// 	}
+		// });
+
+		$('[header-nav-wr-js]').hover(
+			(ev) => {
+				if($(window).width() > 1279) {
+					$(ev.currentTarget).addClass('is-hover').stop(true, true);
 				}
-			} else {
-				if($(ev.currentTarget).hasClass('is-hover')) {
-					$(ev.currentTarget).removeClass('is-hover');
-				} else {
-					$('[header-nav-wr-js]').removeClass('is-hover');
-					$(ev.currentTarget).addClass('is-hover');
+			},
+			(ev) => {
+				if($(window).width() > 1279) {
+					$(ev.currentTarget).removeClass('is-hover').stop(true, true);
 				}
 			}
+		);
+
+		$('[header-nav-wr-js] .header__nav-link span').on('click', (ev) => {
+			const el = $(ev.currentTarget).closest('[header-nav-wr-js]');
+
+			if(el.find('.header__nav-link-drop').is(':visible')) {
+				el.find('.header__nav-link-drop').slideUp(350);
+			} else {
+				$('[header-nav-wr-js] .header__nav-link-drop').slideUp(350);
+				el.find('.header__nav-link-drop').slideDown(350);
+			}
+
+			ev.preventDefault();
+			return false;
 		});
 
 		$(window).on('resize', (ev) => {

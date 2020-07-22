@@ -202,9 +202,8 @@
 			@include adaptive(1279) {
 				justify-content: space-between;
 				width: 100%;
-				min-height: 50px;
+				height: 50px;
 				padding-left: 10px;
-				padding-right: 10px;
 				margin-right: 0;
 				border-bottom: 1px solid #fff;
 			}
@@ -229,6 +228,13 @@
 
 			&:after {
 				right: 50%;
+			}
+
+			span {
+				@include adaptive(1279) {
+					width: 50px;
+					height: 50px;
+				}
 			}
 
 			.icon-font {
