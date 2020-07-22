@@ -93,6 +93,16 @@
 				font-size: 14px;
 				color: #6d6e71;
 			}
+
+			//&.book-datepicker {
+			//	&:after {
+			//		content: attr(placeholder) !important;
+			//	}
+			//
+			//	&[value]:not([value=""]) + &:after {
+			//		content: '' !important;
+			//	}
+			//}
 		}
 
 		&-textarea {

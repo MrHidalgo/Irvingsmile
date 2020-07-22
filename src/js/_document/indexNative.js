@@ -6,8 +6,11 @@
 	* CALLBACK :: start
 	* ============================================= */
 	const initDatePicker = () => {
-		flatpickr('.book-datepicker', {
-			dateFormat: "m/d/Y",
+		$.each($('.book-datepicker'), (idx, val) => {
+			new Pikaday({
+				field: $(val)[0],
+				format: 'DD/MM/YYYY',
+			});
 		});
 	};
 
@@ -82,10 +85,10 @@
 			const el = $(ev.currentTarget).closest('[header-nav-wr-js]');
 
 			if(el.find('.header__nav-link-drop').is(':visible')) {
-				el.find('.header__nav-link-drop').slideUp(350);
+				el.find('.header__nav-link-drop').slideUp(400);
 			} else {
-				$('[header-nav-wr-js] .header__nav-link-drop').slideUp(350);
-				el.find('.header__nav-link-drop').slideDown(350);
+				$('[header-nav-wr-js] .header__nav-link-drop').slideUp(400);
+				el.find('.header__nav-link-drop').slideDown(400);
 			}
 
 			ev.preventDefault();

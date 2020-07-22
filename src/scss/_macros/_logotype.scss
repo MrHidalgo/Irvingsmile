@@ -3,6 +3,7 @@
 .logo {
 	&__btn {
 		display: flex;
+		align-items: flex-start;
 		max-width: 200px;
 		@include adaptive(767) {
 			max-width: 40px;
