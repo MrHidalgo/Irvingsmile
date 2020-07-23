@@ -4,6 +4,9 @@
 	padding-top: 75px;
 	padding-bottom: 25px;
 	background-color: #7bc143;
+	@include adaptive(767) {
+		padding-bottom: 75px;
+	}
 
 	&__wrapper {
 		display: flex;
